@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <script src="js/mui.min.js"></script>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    <script type="text/javascript" charset="utf-8">
+      	mui.init();
+      	mui.plusReady(function(){
+      		reg=document.getElementById('submit');
+      		reg.addEventListener('tap',function(){
+      			var user=document.getElementById('name');
+      			var pass=document.getElementById('pass');
+      			var repass=document.getElementById('repass');
+      			if(user.value.length=0){
+      				plus.ui.toast('用户名不能为空');
+      				return;
+      			}
+      			if(pass.value.length=0){
+      				plus.ui.toast('密码不能为空');
+      				return;
+      			}
+      			if(pass.value!=repass.value){
+      				plus.ui.toast('两个密码不一致');
+      				return;
+      			}
+      		})
+      	})
+      	 	
+    </script>
+    <style>
+    	#button{
+    		text-align: center;
+    	}
+    	.mui-content{
+    		margin-top: 10px;
+    	}
+    </style>
+</head>
+<body>
+	<header class="mui-bar mui-bar-nav">
+	    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+	    <h1 class="mui-title">TennisWord注册</h1>
+	</header>
+	<div class="mui-content">
+	    <form class="mui-input-group">
+	        <div class="mui-input-row">
+	            <label>用户名</label>
+	            
+	            <input type="text" id="name" class="mui-input-clear" placeholder="请输入用户名">
+	        </div>
+	        <div class="mui-input-row">
+	            <label>密码</label>
+	            
+	            <input type="password" id="pass"class="mui-input-clear" placeholder="请输入密码">
+	        </div>
+	        <div class="mui-input-row">
+	            <label>确认密码</label>
+	            
+	            <input type="password" id="repass" class="mui-input-clear" placeholder="请输入确认密码">
+	        </div>
+	    </form>
+	     <div class="mui-content-padded" id="button">
+	    	<button class="mui-btn  mui-btn-primary" id="submit">注册</button>
+	    	<button class="mui-btn  mui-btn-primary">重置</button>
+	    </div>
+	</div>
+</body>
+</html>
