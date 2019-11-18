@@ -30,42 +30,87 @@
       	})
       	 	
     </script>
-    <style>
+    <style type="text/css">
+		#header{
+			align-content: center;
+			text-align: center;
+			color: black;
+			letter-spacing: 1.5px;
+			font-size: 45px;
+			font-family: "times new roman";
+			font-style: italic;
+			margin-bottom: 40px;
+			background-color: transparent;
+		}
+		.account_pass{
+		font-family: "微软雅黑";
+		font-size: 20px;	
+		margin-left: ;
+	    }
     	#button{
     		text-align: center;
+    			
     	}
     	.mui-content{
-    		margin-top: 10px;
+    		margin-top: 30px;
     	}
+    	.mui-input-group{
+		background-color: transparent;
+		margin-top: 10px;
+		/*border-bottom: hidden;*/
+		}
+		.mui-input-row{
+			border-top-style: none;
+			padding-left: 20px;
+			padding-right:30px;
+		}
+		.mui-icon{
+		margin-top: 30px;
+		font-size: 60px;
+		padding-left: 50px; 
+		padding-right: 60px;
+	    }
+		.mui-input-clear{
+
+	    }
     </style>
 </head>
 <body>
-	<header class="mui-bar mui-bar-nav">
-	    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
-	    <h1 class="mui-title">TennisWord注册</h1>
-	</header>
-	<div class="mui-content">
+<div style="solid #000000; width: 391px; height: 0px;margin: 0 auto;">
+	<div  class="mui-content">
+		<div>
+			<p align="center"><img src="img/head_picture.PNG"></img></p>
+	    	<p id="header">TennisWorld</p>
+		</div>
+		<div style=" width:100%;margin-left: 5%; margin-right: 5%;margin-top: 40px;">     
+		</div>  
 	    <form class="mui-input-group">
 	        <div class="mui-input-row">
-	            <label>用户名</label>
-	            
-	            <input type="text" id="name" class="mui-input-clear" placeholder="请输入用户名">
+	            <label class="account_pass">账号</label>
+	            <input type="text" class="mui-input-clear" placeholder="手机号、用户名、邮箱">
 	        </div>
+	    </form>
+	    <form class="mui-input-group">
 	        <div class="mui-input-row">
-	            <label>密码</label>
+	            <label class="account_pass">密码</label>
 	            
 	            <input type="password" id="pass"class="mui-input-clear" placeholder="请输入密码">
 	        </div>
+	    </form>
+	    <form class="mui-input-group">
 	        <div class="mui-input-row">
-	            <label>确认密码</label>
-	            
+	            <label class="account_pass">确认密码</label>
 	            <input type="password" id="repass" class="mui-input-clear" placeholder="请输入确认密码">
 	        </div>
 	    </form>
+	    <div style=" width:100%;margin-left: 5%; margin-right: 5%;margin-top: 30px;">
+            
+		</div>  
 	     <div class="mui-content-padded" id="button">
 	    	<button class="mui-btn  mui-btn-primary" id="submit">注册</button>
 	    	<button class="mui-btn  mui-btn-primary">重置</button>
 	    </div>
 	</div>
+</div>
 </body>
 </html>
