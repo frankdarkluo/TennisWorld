@@ -13,7 +13,7 @@
       		reg.addEventListener('tap',function(){
       			var user=document.getElementById('name');
       			var pass=document.getElementById('pass');
-      			var repass=document.getElementById('repass');
+      			var rpwd=document.getElementById('repass');
       			if(user.value.length=0){
       				plus.ui.toast('用户名不能为空');
       				return;
@@ -88,32 +88,28 @@
 		</div>
 		<div style=" width:100%;margin-left: 5%; margin-right: 5%;margin-top: 40px;">     
 		</div>  
-	    <form class="mui-input-group">
+	    <form class="mui-input-group" action="reg.php" method="post">
 	        <div class="mui-input-row">
 	            <label class="account_pass">账号</label>
-	            <input type="text" class="mui-input-clear" placeholder="手机号、用户名、邮箱">
+	            <input type="text" name="username" class="mui-input-clear" placeholder="手机号、用户名、邮箱">
 	        </div>
-	    </form>
-	    <form class="mui-input-group">
+
 	        <div class="mui-input-row">
 	            <label class="account_pass">密码</label>
-	            
-	            <input type="password" id="pass"class="mui-input-clear" placeholder="请输入密码">
+	            <input type="password" name="password" id="pass" class="mui-input-clear" placeholder="请输入密码">
 	        </div>
-	    </form>
-	    <form class="mui-input-group">
+	        
 	        <div class="mui-input-row">
 	            <label class="account_pass">确认密码</label>
-	            <input type="password" id="repass" class="mui-input-clear" placeholder="请输入确认密码">
+	            <input type="password" name="rpwd" id="repass" class="mui-input-clear" placeholder="请输入确认密码">
 	        </div>
-	    </form>
-	    <div style=" width:100%;margin-left: 5%; margin-right: 1%;margin-top: 80px;">
-            
-		</div>  
-	     <div class="mui-content-padded" id="button">
-	    	<button class="mui-btn  mui-btn-primary" id="submit" style="background-color:#0086B3;border:0;">注册</button>
-	    <!--	<button class="mui-btn  mui-btn-primary">重置</button>-->
-	    </div>
+	        
+		    <div style=" width:100%;margin-left: 5%; margin-right: 1%;margin-top: 80px;"> </div>  
+		    <div class="mui-content-padded" id="button">
+		    	<button class="mui-btn  mui-btn-primary" id="submit" type="submit" style="background-color:#0086B3;border:0;">注册</button>
+		    <!--	<button class="mui-btn  mui-btn-primary">重置</button>-->
+		    </div>
+		</form>
 	</div>
 </div>
 </body>

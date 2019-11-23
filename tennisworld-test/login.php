@@ -1,25 +1,22 @@
 <?php
-	
-if(trim($_POST['password'])!=trim($_POST['rpwd']))
-{
-	exit('两次密码不一致,请返回上一页');
-}
-
 $link = mysqli_connect('cdb-7c1trg88.bj.tencentcdb.com:10203', 'root', 'tennisworld123') 
 		or die ('连接失败 : ' . mysqli_error());
-mysqli_select_db($link,'tennisword');
+
+mysqli_select_db($link,'tennisworld');
 mysqli_set_charset($link,'utf8');
 
 $username=$_POST['username'];
 $password=$_POST['password'];
  
-$sql="insert into reg_info values('$username','$password')";
+$sql="select * from reg_info where username='$username' AND password='$password'";
 
 $result=mysqli_query($link,$sql);
-if($result){
-	echo'注册成功！';
+if($result->num_rows!=0){
+	Header("HTTP/1.1 303 See Other"); 
+	Header("Location:main.html"); 
+	exit;
 }else{
-	echo'注册失败！';
+	echo '账号或密码错误！';
 }
 
 mysqli_close($link);

@@ -77,26 +77,25 @@
 	    	<p id="header">TennisWorld</p>
 		</div>
 	    
-	    <form class="mui-input-group">
+	    <form class="mui-input-group" action="login.php" method="post">
 	        <div class="mui-input-row">
 	            <label class="account_pass">账号</label>
-	            <input type="text" class="mui-input-clear" placeholder="手机号、用户名、邮箱">
+	            <input type="text" name="username" class="mui-input-clear" placeholder="手机号、用户名、邮箱">
 	        </div>
-	    </form>
-	    <form class="mui-input-group">
+	        
 	        <div class="mui-input-row">
 	            <label class="account_pass">密码</label>
-	            <input type="password" class="mui-input-clear" placeholder="请输入登录密码">
+	            <input type="password" name="password" class="mui-input-clear" placeholder="请输入登录密码">
 	        </div>
+	        
+	        <p align="center">
+		    <button type="submit" class="mui-btn">登录</button>
+		    <button type="submit" class="mui-btn">注册</button>
+		    </p>
+		    <p align="right">
+		    	<a href="#" style="color: gray; padding-right: 10px;">忘记密码</a>
+		    </p>
 	    </form>
-	    <p align="center">
-		    <button type="button" class="mui-btn">登录</button>
-		    <button type="button" class="mui-btn">注册</button>
-	    </P>
-	    <p align="right">
-	    	<a href="#" style="color: gray; padding-right: 10px;">忘记密码</a>
-	    </p>
-	    
 	    
 		<div style=" width:100%;margin-left: 5%; margin-right: 5%;margin-top: 80px;">
             <hr class="hrLine" style="width:30%;"/>  第三方登录  <hr class="hrLine" style="width:30%;"/>
