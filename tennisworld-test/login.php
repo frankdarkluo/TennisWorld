@@ -11,12 +11,10 @@ $password=$_POST['password'];
 $sql="select * from reg_info where username='$username' AND password='$password'";
 
 $result=mysqli_query($link,$sql);
-if($result->num_rows!=0){
-	Header("HTTP/1.1 303 See Other"); 
-	Header("Location:main.html"); 
-	exit;
+if($result->num_rows!=0){ 
+	echo '<html><head><Script Language="JavaScript">alert("登录成功！");</Script></head></html>' . "<meta http-equiv=\"refresh\" content=\"0;url=main.html\">";
 }else{
-	echo '账号或密码错误！';
+	echo '<html><head><Script Language="JavaScript">alert("账号或密码错误！");</Script></head></html>' . "<meta http-equiv=\"refresh\" content=\"0;url=login.html\">";
 }
 
 mysqli_close($link);

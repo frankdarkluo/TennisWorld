@@ -6,30 +6,48 @@
     <title></title>
     <script src="js/mui.min.js"></script>
     <link href="css/mui.min.css" rel="stylesheet"/>
-    <script type="text/javascript" charset="utf-8">
-      	mui.init();
-      	mui.plusReady(function(){
-      		reg=document.getElementById('submit');
-      		reg.addEventListener('tap',function(){
-      			var user=document.getElementById('name');
-      			var pass=document.getElementById('pass');
-      			var rpwd=document.getElementById('repass');
-      			if(user.value.length=0){
-      				plus.ui.toast('用户名不能为空');
-      				return;
-      			}
-      			if(pass.value.length=0){
-      				plus.ui.toast('密码不能为空');
-      				return;
-      			}
-      			if(pass.value!=repass.value){
-      				plus.ui.toast('两个密码不一致');
-      				return;
-      			}
-      		})
-      	})
-      	 	
-    </script>
+    
+    <script language="javascript">
+    	mui.init();
+		function IsDigit(cCheck){
+			return (('0'<=cCheck) && (cCheck<='9'));
+		}
+		function IsAlpha(cCheck){
+			return ((('a'<=cCheck) && (cCheck<='z')) || (('A'<=cCheck) && (cCheck<='Z')))
+		}
+		function IsValid(){
+			var struserName = reg.username.value;
+			for (nIndex=0; nIndex<struserName.length; nIndex++){
+				cCheck = struserName.charAt(nIndex);
+				if (!(IsDigit(cCheck) || IsAlpha(cCheck))){
+					return false;
+				}
+			}
+			return true;
+		}
+		function docheck(){
+			if(reg.username.value==""){
+				alert("请填写用户名！");
+				return false;
+			}
+			else if(!IsValid()){
+				alert("用户名只能使用字母和数字！");
+				return false;
+			}
+			else if(reg.password.value==""){
+				alert("请填写密码！");
+				return false;
+			}
+			else if(reg.password.value != reg.rpwd.value){
+				alert("两次密码不一致！");
+				return false;
+			}
+			else{
+				return true;
+			}
+		}
+	</script>
+    
     <style type="text/css">
 		#header{
 			align-content: center;
@@ -79,6 +97,7 @@
 	    }
     </style>
 </head>
+
 <body>
 <div style="solid #000000; width: 391px; height: 0px;margin: 0 auto;">
 	<div  class="mui-content">
@@ -88,7 +107,7 @@
 		</div>
 		<div style=" width:100%;margin-left: 5%; margin-right: 5%;margin-top: 40px;">     
 		</div>  
-	    <form class="mui-input-group" action="reg.php" method="post">
+	    <form class="mui-input-group" name="reg" action="reg.php" method="post" target="_self" onSubmit="return docheck()">
 	        <div class="mui-input-row">
 	            <label class="account_pass">账号</label>
 	            <input type="text" name="username" class="mui-input-clear" placeholder="手机号、用户名、邮箱">
@@ -96,17 +115,17 @@
 
 	        <div class="mui-input-row">
 	            <label class="account_pass">密码</label>
-	            <input type="password" name="password" id="pass" class="mui-input-clear" placeholder="请输入密码">
+	            <input type="password" name="password" class="mui-input-clear" placeholder="请输入密码">
 	        </div>
 	        
 	        <div class="mui-input-row">
 	            <label class="account_pass">确认密码</label>
-	            <input type="password" name="rpwd" id="repass" class="mui-input-clear" placeholder="请输入确认密码">
+	            <input type="password" name="rpwd" class="mui-input-clear" placeholder="请输入确认密码">
 	        </div>
 	        
 		    <div style=" width:100%;margin-left: 5%; margin-right: 1%;margin-top: 80px;"> </div>  
 		    <div class="mui-content-padded" id="button">
-		    	<button class="mui-btn  mui-btn-primary" id="submit" type="submit" style="background-color:#0086B3;border:0;">注册</button>
+		    	<button class="mui-btn  mui-btn-primary" type="submit" style="background-color:#0086B3;border:0;">注册</button>
 		    <!--	<button class="mui-btn  mui-btn-primary">重置</button>-->
 		    </div>
 		</form>

@@ -6,9 +6,44 @@
     <title></title>
     <script src="js/mui.min.js"></script>
     <link href="css/mui.min.css" rel="stylesheet"/>
-    <script type="text/javascript" charset="utf-8">
-      	mui.init();
-    </script>
+    
+    <script language="javascript">
+    	mui.init();
+		function IsDigit(cCheck){
+			return (('0'<=cCheck) && (cCheck<='9'));
+		}
+		function IsAlpha(cCheck){
+			return ((('a'<=cCheck) && (cCheck<='z')) || (('A'<=cCheck) && (cCheck<='Z')))
+		}
+		function IsValid(){
+			var struserName = reg.username.value;
+			for (nIndex=0; nIndex<struserName.length; nIndex++){
+				cCheck = struserName.charAt(nIndex);
+				if (!(IsDigit(cCheck) || IsAlpha(cCheck))){
+					return false;
+				}
+			}
+			return true;
+		}
+		function docheck(){
+			if(reg.username.value==""){
+				alert("请填写用户名！");
+				return false;
+			}
+			else if(!IsValid()){
+				alert("用户名不合法！");
+				return false;
+			}
+			else if(reg.password.value==""){
+				alert("请填写密码！");
+				return false;
+			}
+			else{
+				return true;
+			}
+		}
+	</script>
+	
 </head>
 <style type="text/css">
 	.mui-content{
@@ -77,7 +112,7 @@
 	    	<p id="header">TennisWorld</p>
 		</div>
 	    
-	    <form class="mui-input-group" action="login.php" method="post">
+	    <form class="mui-input-group" name="reg" action="login.php" method="post" target="_self" onSubmit="return docheck()">
 	        <div class="mui-input-row">
 	            <label class="account_pass">账号</label>
 	            <input type="text" name="username" class="mui-input-clear" placeholder="手机号、用户名、邮箱">
