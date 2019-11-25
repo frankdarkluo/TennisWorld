@@ -1,110 +1,173 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
-    <title></title>
-    <script src="js/mui.min.js"></script>
-    <link href="css/mui.min.css" rel="stylesheet"/>
-    <script type="text/javascript" charset="utf-8">
-      	mui.init();
-    </script>
-</head>
-<style type="text/css">
-	.mui-content{
-		margin-top:30px;
-	}
-	#header{
-		align-content: center;
-		text-align: center;
-		color: black;
-		letter-spacing: 1.5px;
-		font-size: 45px;
-		font-family: "times new roman";
-		font-style: italic;
-		margin-bottom: 40px;
-		background-color: transparent;
-	}
-	.mui-input-group{
-		background-color: transparent;
-		margin-top: 10px;
-		/*border-bottom: hidden;*/
-	}
-	.mui-input-row{
-		border-top-style: none;
-		/*border-bottom-color: black;
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<script src="js/mui.min.js"></script>
+		<script src="js/sweetalert.min.js"></script>
+		<link href="css/mui.min.css" rel="stylesheet" />
+
+		<script language="javascript">
+			mui.init();
+
+			function IsDigit(cCheck) {
+				return(('0' <= cCheck) && (cCheck <= '9'));
+			}
+
+			function IsAlpha(cCheck) {
+				return((('a' <= cCheck) && (cCheck <= 'z')) || (('A' <= cCheck) && (cCheck <= 'Z')))
+			}
+
+			function IsValid() {
+				var struserName = reg.username.value;
+				for(nIndex = 0; nIndex < struserName.length; nIndex++) {
+					cCheck = struserName.charAt(nIndex);
+					if(!(IsDigit(cCheck) || IsAlpha(cCheck))) {
+						return false;
+					}
+				}
+				return true;
+			}
+
+			function docheck() {
+				if(reg.username.value == "") {
+					swal({
+						title: "用户名为空!",
+						text: "请输入用户名!",
+						icon: "error",
+						className: "sweetAlert"
+					})
+					return false;
+				} else if(!IsValid()) {
+					swal({
+						title: "用户名错误!",
+						text: "只能使用数字和字母!",
+						icon: "error",
+						className: "sweetAlert"
+					})
+					return false;
+				} else if(reg.password.value == "") {
+					swal({
+						title: "密码为空!",
+						text: "请输入密码!",
+						icon: "error",
+						className: "sweetAlert"
+					})
+					return false;
+				} else {
+					return true;
+				}
+			}
+		</script>
+
+	</head>
+	<style type="text/css">
+		.mui-content {
+			margin-top: 30px;
+		}
+		
+		#header {
+			align-content: center;
+			text-align: center;
+			color: black;
+			letter-spacing: 1.5px;
+			font-size: 45px;
+			font-family: "times new roman";
+			font-style: italic;
+			margin-bottom: 40px;
+			background-color: transparent;
+		}
+		
+		.mui-input-group {
+			background-color: transparent;
+			margin-top: 10px;
+			/*border-bottom: hidden;*/
+		}
+		
+		.mui-input-row {
+			border-top-style: none;
+			/*border-bottom-color: black;
 		border-bottom: solid;
 		border-bottom-width: 1px;*/
-	}
-	.account_pass{
-		font-family: "微软雅黑";
-		font-size: 20px;	
-	}
-	.mui-input-clear{
+		}
+		
+		.account_pass {
+			font-family: "微软雅黑";
+			font-size: 20px;
+		}
+		
+		.mui-input-clear {}
+		
+		.mui-btn {
+			background-color: transparent;
+			border: none;
+			font-family: "微软雅黑";
+			font-size: 20px;
+			margin-top: 30px;
+			padding-right: 50px;
+			padding-left: 50px;
+		}
+		
+		.hrLine {
+			vertical-align: middle;
+			display: inline-block;
+		}
+		
+		.mui-icon {
+			margin-top: 30px;
+			font-size: 60px;
+			padding-left: 50px;
+			padding-right: 60px;
+		}
+		
+		.bottom-label {
+			padding-left: 55px;
+			padding-right: 60px;
+			font-size: 15px;
+		}
+	</style>
 
-	}
-	.mui-btn{
-		background-color: transparent;
-		border:none;
-		font-family: "微软雅黑";
-		font-size: 20px;
-		margin-top: 30px;
-		padding-right: 50px;
-		padding-left: 50px;
-	}
-	.hrLine{
-    	vertical-align:middle; display:inline-block;
-	}
-	.mui-icon{
-		margin-top: 30px;
-		font-size: 60px;
-		padding-left: 50px; 
-		padding-right: 60px;
-	}
-	.bottom-label{
-		 padding-left: 55px; 
-		 padding-right: 60px;
-		 font-size: 15px;
-	}
+	<body>
+		<div style="solid #000000; width: 350px; height: 0px;margin: 0 auto;">
+			<div class="mui-content">
+				<div>
+					<p align="center"><img src="img/head_picture.PNG"></img>
+					</p>
+					<p id="header">TennisWorld</p>
+				</div>
 
-</style>
+				<form class="mui-input-group" name="reg" action="login.php" method="post" target="_self" onSubmit="return docheck()">
+					<div class="mui-input-row">
+						<label class="account_pass">账号</label>
+						<input type="text" name="username" class="mui-input-clear" placeholder="手机号、用户名、邮箱">
+					</div>
 
-<body>
-<div style="solid #000000; width: 350px; height: 0px;margin: 0 auto;">
-	<div class="mui-content">
-		<div>
-			<p align="center"><img src="img/head_picture.PNG"></img></p>
-	    	<p id="header">TennisWorld</p>
+					<div class="mui-input-row">
+						<label class="account_pass">密码</label>
+						<input type="password" name="password" class="mui-input-clear" placeholder="请输入登录密码">
+					</div>
+
+					<p align="center">
+						<button type="submit" class="mui-btn">登录</button>
+						<button class="mui-btn" herf="reg.html">注册</button>
+					</p>
+					<p align="right">
+						<a href="#" style="color: gray; padding-right: 10px;">忘记密码</a>
+					</p>
+				</form>
+
+				<div style=" width:100%;margin-left: 5%; margin-right: 5%;margin-top: 80px;">
+					<hr class="hrLine" style="width:30%;" /> 第三方登录
+					<hr class="hrLine" style="width:30%;" />
+				</div>
+				<a href="#" style="color: gray"><span class="mui-icon mui-icon-qq"></span></a>
+				<a href="#" style="color: gray;"><span class="mui-icon mui-icon-weixin"></span></a>
+				<label class="bottom-label">QQ登录</label>
+				<label class="bottom-label">微信登录</label>
+			</div>
 		</div>
-	    
-	    <form class="mui-input-group" action="login.php" method="post">
-	        <div class="mui-input-row">
-	            <label class="account_pass">账号</label>
-	            <input type="text" name="username" class="mui-input-clear" placeholder="手机号、用户名、邮箱">
-	        </div>
-	        
-	        <div class="mui-input-row">
-	            <label class="account_pass">密码</label>
-	            <input type="password" name="password" class="mui-input-clear" placeholder="请输入登录密码">
-	        </div>
-	        
-	        <p align="center">
-		    <button type="submit" class="mui-btn">登录</button>
-		    <button type="submit" class="mui-btn">注册</button>
-		    </p>
-		    <p align="right">
-		    	<a href="#" style="color: gray; padding-right: 10px;">忘记密码</a>
-		    </p>
-	    </form>
-	    
-		<div style=" width:100%;margin-left: 5%; margin-right: 5%;margin-top: 80px;">
-            <hr class="hrLine" style="width:30%;"/>  第三方登录  <hr class="hrLine" style="width:30%;"/>
-		</div>    
-	    <a href="#"	style="color: gray"><span class="mui-icon mui-icon-qq"></span></a>
-		<a href="#" style="color: gray;"><span class="mui-icon mui-icon-weixin"></span></a>
-	    <label class="bottom-label">QQ登录</label>
-		<label class="bottom-label">微信登录</label>
-	</div>
-</div>
-</body>
+	</body>
+
 </html>
