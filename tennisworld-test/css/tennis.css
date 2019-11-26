@@ -7,8 +7,10 @@
 
 .background{
 	width: 100%;
-	background-color: #f5f5f5;
-	border: 1px solid #eee;
+	/*background-color: #f5f5f5;*/
+	background-color: transparent;
+	/*border: 1px solid #eee;*/
+	border: none;
 }
 
 .top{
@@ -40,16 +42,21 @@
 
 .tbottom{
 	text-align: center;
-	height: 60px;
+	height: 30px;
 	width:100%;
+	background-color: transparent;
+	/*background: white;*/
 }
-
+.tbottom a{
+	color: black;
+	font-family: "微软雅黑";
+}
 .tbottom li{
 	display: inline-block;
 	list-style-type: none;
 	float:left;
-	line-height: 60px;
-	width: 20%;
+	line-height: 20px;
+	width: 25%;
 	font-size: 20px;
 	margin-left: 5%;
 	text-align: left;
@@ -57,50 +64,94 @@
 
 .form{
 	display: inline-block;
-	height: 60px;
+	height: 45px;
 	width: 100%;
-	background-color: #fff;
+	/*background-color: #fff;*/
 }
 
 .xuanze{
+	padding-top: 2px;
+	padding-bottom: 5px;
+	height: 30px;
 	text-align: left;
-	font-size: 24px;
-	background-color: #f5f5f5;
+	font-size: 100%;
+	/*font-size: 24px;*/
+	background: url(../img/arrow.jpg) no-repeat right;
+	background-size: 12px;
+	background-color: white;
 	border: 0;
-	border-radius: 25%;
+	border-radius: 10%;
+	/*padding-right: 50%;*/
+	padding-left: 1px;
 }
 
 
 .form div{
 	text-align: left;
 	display: inline-block;
-	height: 60px;
-	width: 20%;
+	height: 30px;
 }
 
 .f1{
-	margin-left: 10%;
+	width: 20%;
+	margin-left: 5%;
 }
 
 .f2{
+	width: 35%;
 	margin-left: 5%;
 }
 
 .f3{
-	margin-left: 10%;
+	width: 20%;
+	margin-left: 5%;
 }
 
 .content{
 	width:100%;
-	height: 700px;
-	background-color: #fff;
+	/*height: 1000px;*/
+	background-color: #ffffff;
+	border: none;
 }
 
 table{
+	background-color: #ffffff;
+	/*margin:auto;*/
 	width: 100%;
-	height:20px;
+	/*height:30px;*/
+	text-align: left;
+	border: none;
+	border-color: transparent;
+}
+
+
+/*table tr th{
+	padding-left: 2%;
+	width:20%;	
+}
+
+table tr td{
+	padding-left: 2%;
+	width:20%;
+	/*text-align:left;*/
+}*/
+.rank{
+	width:10%;
+	/*text-align: left;*/
+}
+.player{
+	width:30%;
+	padding-right: 5%;
+	/*text-align: left;*/
+}
+.country{
+	width:20%;
+	padding-right: 5%;
 	text-align: center;
-	border: 1px solid red;
+}
+.score{
+	text-align: center;
+	width:15%;
 }
 
 .xian{

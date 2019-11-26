@@ -1,7 +1,4 @@
 <?php
-echo '<script src="js/sweetalert.min.js"></script>';
-echo '<link href="css/mui.min.css" rel="stylesheet"/>';
-
 $link = mysqli_connect('cdb-7c1trg88.bj.tencentcdb.com:10203', 'root', 'tennisworld123') or die('连接失败 : ' . mysqli_error());
 
 mysqli_select_db($link, 'tennisworld');
@@ -13,30 +10,20 @@ $password = $_POST['password'];
 $sql = "select * from reg_info where username='$username' AND password='$password'";
 
 $result = mysqli_query($link, $sql);
+
 if ($result -> num_rows != 0) {
 	echo '<html>
 			<head>
 				<Script Language="JavaScript">
-					swal({
-				        title: "登录成功!",
-				        text: "将跳转主页面",
-				        timer: 2000,
-				        className: "sweetAlert"
-				    })
 					location.href="main.html";
 				</Script>
 			</head>
 		</html>';
+
 } else {
 	echo '<html>
 			<head>
 				<Script Language="JavaScript">
-					swal({
-				        title: "自动关闭警报!",
-				        text: "2秒后自动关闭",
-				        timer: 2000,
-				        className: "sweetAlert"
-				    })
 					location.href="login.html";
 				</Script>
 			</head>

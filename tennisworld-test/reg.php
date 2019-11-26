@@ -1,5 +1,4 @@
 <?php
-echo '<script src="js/sweetalert.min.js"></script>';
 $link = mysqli_connect('cdb-7c1trg88.bj.tencentcdb.com:10203', 'root', 'tennisworld123') or die('连接失败 : ' . mysqli_error());
 mysqli_select_db($link, 'tennisworld');
 mysqli_set_charset($link, 'utf8');
