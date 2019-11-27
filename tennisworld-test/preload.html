@@ -4,6 +4,17 @@
         <meta charset="gbk2312">
         <title>粒子背景</title>
         <link rel="stylesheet" type="text/css" href="style.css" media="all">
+        <script type="text/javascript" charset="utf-8">
+      	mui.init();
+      	mui.plusReady(function(){
+      		xinwen1=document.getElementById('login-page');
+      		xinwen1.addEventListener('tap',function(){
+      			mui.openWindow({
+      				url:'main.html',
+      			})
+      		})
+      	});
+    </script>
     <style>
 html,body {
     font-size: 14px;
@@ -32,7 +43,7 @@ position: fixed;
 }
 </style>
     </head>
-    <body id="login-page">
+<body id="login-page">
         <canvas width="1293" height="717"></canvas>
     <script>
 /**

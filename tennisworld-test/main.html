@@ -49,6 +49,12 @@
     		display:inline-block;
     		background-color:#4CD964;
     	}
+    	.mui-slider-group{
+    		position:fixed;
+    	}
+    	mui('.mui-bar-tab').on('tap','a',function(e){
+    		
+    	})
     </style>
     
 </head>
@@ -178,15 +184,15 @@
         
     </div>
     <nav class="mui-bar mui-bar-tab">
-        <a class="mui-tab-item mui-active">
+        <a class="mui-tab-item mui-active" href="main.html">
             <span class="mui-icon iconfont icon-home"></span>
             <span class="mui-tab-label">首页</span>
         </a>
-        <a class="mui-tab-item">
+        <a class="mui-tab-item mui-active" href="play.html">
             <span class="mui-icon iconfont icon-game"></span>
             <span class="mui-tab-label">赛事</span>
         </a>
-        <a class="mui-tab-item">
+        <a class="mui-tab-item mui-active">
             <span class="mui-icon iconfont icon-player"></span>
             <span class="mui-tab-label">球员</span>
         </a>
