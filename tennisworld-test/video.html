@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>vedio</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="head1.js"></script>
+	<style type="text/css">
+		.top{
+			width: 100%;
+			height: 30px;
+			text-align: center;
+		}
+		.bottom{
+			width: 100%;
+			height: 50px;
+			background-color: #e4e4e4;
+		}
+
+		.video{
+			width: 100%px;
+			background-color: #fff;
+		}
+	 
+
+	 	button{
+	 		font-size: 20px;
+	 		margin-left: 40%;
+	 		margin-right: 5%;
+	 		text-decoration: none;
+	 		background-color: #e4e4e4;
+	 		border: 0px;
+	 		outline: none;
+	 	}
+
+	 	.dianzannum{
+	 		font-size: 20px;
+	 	}
+
+	</style>
+
+	<script type="text/javascript">
+		function zan(i){		
+			var con = document.getElementById("dianzan.num"+i.toString());
+			var zan = document.getElementById("zan"+i.toString())
+			if (String(zan.innerText) == "赞一个") {
+				con.innerText = Number(con.innerText)+1;
+			    zan.innerText = "已点赞";
+			    zan.style.color = "red";
+			}
+			else{
+				con.innerText = Number(con.innerText)-1;
+			    zan.innerText = "赞一个";
+			    zan.style.color = "black";
+			}	
+		}					
+	</script>
+
+		
+
+</head>
+<body>
+
+	<div class="video">
+
+		<video id="myvedio1" autoplay="autoplay" controls="controls" width="100%" >
+			<source src="video/1.mp4" type="video/mp4">
+		</video>
+
+
+		<div class="bottom">
+			<button onclick="zan(1)" id="zan1">赞一个</button> 
+			<span id="dianzan.num1" class="dianzannum">22000</span>
+		</div>
+
+	</div>
+
+
+
+	<div class="video">
+
+		<video id="myvedio1" autoplay="autoplay" controls="controls" width="100%" >
+			<source src="video/2.mp4" type="video/mp4">
+		</video>
+
+
+		<div class="bottom">
+			<button onclick="zan(2)" id="zan2">赞一个</button> 
+			<span id="dianzan.num2" class="dianzannum">4399</span>
+		</div>
+
+	</div>
+
+
+	<div class="video">
+
+		<video id="myvedio1" autoplay="autoplay" controls="controls" width="100%" >
+			<source src="video/3.mp4" type="video/mp4">
+		</video>
+
+
+		<div class="bottom">
+			<button onclick="zan(3)" id="zan3">赞一个</button> 
+			<span id="dianzan.num3" class="dianzannum">2800</span>
+		</div>
+
+	</div>
+
+	<div class="video">
+
+		<video id="myvedio1" autoplay="autoplay" controls="controls" width="100%" >
+			<source src="video/4.mp4" type="video/mp4">
+		</video>
+
+
+		<div class="bottom">
+			<button onclick="zan(4)" id="zan4">赞一个</button> 
+			<span id="dianzan.num4" class="dianzannum">496</span>
+		</div>
+
+	</div>
+
+	<div class="video">
+
+		<video id="myvedio1" autoplay="autoplay" controls="controls" width="100%" >
+			<source src="video/5.mp4" type="video/mp4">
+		</video>
+
+
+		<div class="bottom">
+			<button onclick="zan(5)" id="zan5">赞一个</button> 
+			<span id="dianzan.num5" class="dianzannum">88</span>
+		</div>
+
+	</div>
+
+		
+
+	
+
+</body>
+</html>
