@@ -1,1 +1,9 @@
-null
+{
+  "main.html": {
+    "refer": [
+      "rank.php",
+      "game.html"
+    ],
+    "resources": []
+  }
+}

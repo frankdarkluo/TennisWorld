@@ -10,7 +10,7 @@
 	"icons": {
 		"72": "icon.png"
 	},
-	"launch_path": "login.html",/*应用的入口页面，默认为根目录下的index.html；支持网络地址，必须以http://或https://开头*/
+	"launch_path": "main.html",/*应用的入口页面，默认为根目录下的index.html；支持网络地址，必须以http://或https://开头*/
 	"developer": {
 		"name": "",/*开发者名称*/
 		"email": "",/*开发者邮箱地址*/
@@ -124,6 +124,59 @@
 					"xxhdpi": ""
 				}
 			}
+		}
+	},
+	"dependencies": {
+		"pages": {
+			"main.html": {
+				"resources": [
+					"game.html"
+				],
+				"refer": [
+					"rank.php"
+				],
+				"priority": 0
+			}
+		},
+		"idle": {
+			"resources": [
+				"login.html",
+				"img/4.jpg",
+				"img/arrow.jpg",
+				"js/mui.min.js",
+				"css/iconfont.css",
+				"info说明.txt",
+				"fonts/iconfont.ttf",
+				"js/mui.js",
+				"article/img/1.jpg",
+				"head.html",
+				"img/xixi.jpg",
+				"fonts/mui.ttf",
+				"preload.html",
+				"reg.html",
+				"head.js",
+				"article/img/2.jpg",
+				"css/mui.css",
+				"js/jquery-3.4.1.js",
+				"img/athlete.png",
+				"play.html",
+				"info.php",
+				"article/content/1.txt",
+				"css/sweetalert.css",
+				"img/2.jpg",
+				"video.html",
+				"login.php",
+				"reg.php",
+				"img/1.jpg",
+				"tennis.php",
+				"css/tennis.css",
+				"css/mui.min.css",
+				"article/content/2.txt",
+				"js/sweetalert.min.js",
+				"head1.js",
+				"img/3.jpg",
+				"img/head_picture.PNG"
+			]
 		}
 	}
 }
