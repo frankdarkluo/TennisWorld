@@ -17,7 +17,6 @@
 		</buildCommand>
 	</buildSpec>
 	<natures>
-		<nature>com.aptana.projects.webnature</nature>
 		<nature>com.pandora.projects.ui.MKeyNature</nature>
 	</natures>
 	<filteredResources>
@@ -77,6 +76,15 @@
 		</filter>
 		<filter>
 			<id>1575189966593</id>
+			<name></name>
+			<type>26</type>
+			<matcher>
+				<id>org.eclipse.ui.ide.multiFilter</id>
+				<arguments>1.0-name-matches-false-false-node_modules</arguments>
+			</matcher>
+		</filter>
+		<filter>
+			<id>1575471488015</id>
 			<name></name>
 			<type>26</type>
 			<matcher>
