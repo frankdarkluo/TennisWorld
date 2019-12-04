@@ -6,26 +6,56 @@
     <title></title>
     <link rel="stylesheet" type="text/css" href="css/iconfont.css"/>
     <script src="js/mui.min.js"></script>
+    <script src="js/jquery-3.4.1.js"></script>
     <link href="css/mui.min.css" rel="stylesheet"/>
     <script type="text/javascript" src="head.js"></script>
     <script type="text/javascript" charset="utf-8">
       	mui.init();
-      	mui.plusReady(function(){
-      		xinwen1=document.getElementById('xinwen1');
-      		xinwen1.addEventListener('tap',function(){
-      			mui.openWindow({
-      				url:'class.html',
-      			    id:'class',
-      			})
-      		})
-      		xinwen2=document.getElementById('xinwen2');
-      		xinwen2.addEventListener('tap',function(){
-      			mui.openWindow({
-      				url:'info.html',
-      			    id:'info',
-      			})
-      		})
-      	});
+      	<script type="text/javascript">
+        mui.init()
+        mui.plusReady(function(){
+            var arr =document.getElementsByClassName("mui-tab-item");
+            var objYe = ["main.html","game.html","rank.php"];
+            var objStyle = {
+                 top:"0px",
+          bottom:"51px",
+            };
+            var objs=[];
+            var self = plus.webview.currentWebview();//取到当前的主页窗口
+            for (var i=0;i<arr.length;i++){
+            !function(i){
+            var obj = plus.webview.create(objYe[i],objYe[i],objStyle);
+             objs.push(obj);
+             
+             arr[i].addEventListener("tap",function(){
+                for(var j=0;j<arr.length;j++){
+                    if(j!=i){objs[j].hide()}
+                    else{objs[j].show()}
+                }
+                self.append(objs[i])
+             })
+             }(i)
+            }
+             mui.trigger(arr[0],"tap");
+            })
+             
+
+//    	mui.plusReady(function(){
+//    		xinwen1=document.getElementById('xinwen1');
+//    		xinwen1.addEventListener('tap',function(){
+//    			mui.openWindow({
+//    				url:'class.html',
+//    			    id:'class',
+//    			})
+//    		})
+//    		xinwen2=document.getElementById('xinwen2');
+//    		xinwen2.addEventListener('tap',function(){
+//    			mui.openWindow({
+//    				url:'info.html',
+//    			    id:'info',
+//    			})
+//    		})
+//    	});
 		
     </script>
     <style type="text/css">
@@ -69,12 +99,23 @@
 </head>
 <body>
 	<div class="mui-content">
-		<div id="class">
-			<a href="#">推荐</a>
-			<a href="#">赛历</a>
-			<a href="#">视频</a>
-			<a href="#">论坛</a>
-		</div>
+		<table border="0" cellspacing="0" cellpadding="0" style="width: 100%; line-height: 40px;">
+			<tr>
+				<td align="center">
+					<a href="#">推荐</a>
+				</td>
+				<td align="center">
+					<a href="#">赛历</a>
+				</td>
+				<td align="center"> 
+					<a href="#">视频</a>
+				</td>
+				<td align="center">	
+					<a href="#">论坛</a>
+				</td>
+			</tr>
+		</table>
+		
         <div id="slider" class="mui-slider" >
           <div class="mui-slider-group mui-slider-loop">
             <!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
@@ -124,19 +165,22 @@
         
         <ul class="mui-table-view">
             <li class="mui-table-view-cell mui-media">
-                <a href="javascript:;" id="xinwen1">
-                    <img class="mui-media-object mui-pull-right" src="img/1.jpg">
+                <!--<a href="javascript:;" id="xinwen1">-->
+            	<!--<a name="123" href="javascript:location.href='info.html?name='+document.getElementsByName('123')[0].value;">-->
+        		<a href="javascript:location.href='info.php?keyword='+$('#info1').html()" id="xinwen1" >
+					<img class="mui-media-object mui-pull-right" src="img/1.jpg">
                     <div class="mui-media-body">
-                        战报|ATP年终总决赛:费得勒不敌蒂姆
+                       	<span id="info1">战报|ATP年终总决赛:费得勒不敌蒂姆</span>
                         <p class="mui-ellipsis">无缘小组赛开门红</p>
                     </div>
                 </a>
             </li>
             <li class="mui-table-view-cell mui-media">
-                <a href="javascript:;" id="xinwen2">
+                <!--<a href="javascript:;" id="xinwen2">-->
+            	<a href="javascript:location.href='info.php?keyword='+$('#info2').html()" id="xinwen2" >
                     <img class="mui-media-object mui-pull-right" src="img/2.jpg">
                     <div class="mui-media-body">
-                        战报|ATP年终总决赛:纳达尔逆转梅德维德夫
+                       	<span id="info2">战报|ATP年终总决赛:纳达尔逆转梅德维德夫</span>
                         <p class="mui-ellipsis">创造史上最伟大逆转</p>
                     </div>
                 </a>
@@ -194,11 +238,8 @@
                         <p class="mui-ellipsis">个人第五次年终第一，平费德记录</p>
                     </div>
                 </a>
-            </li>
-            
-        </ul>
-        
-        
+            </li>           
+        </ul>       
     </div>
 </body>
 </html>

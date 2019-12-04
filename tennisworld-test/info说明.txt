@@ -1,0 +1,19 @@
+info网页运行步骤：
+1、获得url中的参数keyword，将utf8转换成汉字，这也是article_info的主键
+2、在数据库中查找相关信息
+3、用php动态加载页面
+
+图片在“article\img”中，正文在“article\content”中，数据库存储了其路径，及作者时间标题（数据库里要将'\'变为'\\' ！）
+
+
+keyword参数在main中设置，形如
+        	<a href="javascript:location.href='info.php?keyword='+$('#info1').html()" id="xinwen1" >
+		<img class="mui-media-object mui-pull-right" src="img/1.jpg">
+                    	<div class="mui-media-body">
+                       		<span id="info1">战报|ATP年终总决赛:费得勒不敌蒂姆</span>
+                        		<p class="mui-ellipsis">无缘小组赛开门红</p>
+                    	</div>
+                </a>
+
+<span></span>之间的就是keyword
+$('#info1').html()  是 jquery查询，获得id=’info1‘的标签内容
