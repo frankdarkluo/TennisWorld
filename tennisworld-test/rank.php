@@ -7,8 +7,8 @@
     <script src="js/mui.min.js"></script>
     <link rel="stylesheet" type="text/css" href="css/tennis.css"/>
     <link rel="stylesheet" type="text/css" href="css/iconfont.css"/>
-    <script type="text/javascript" src="head.js"></script>
     <link href="css/mui.min.css" rel="stylesheet"/>
+    <script type="text/javascript" src="head.js"></script>
     <script type="text/javascript" charset="utf-8">
       	mui.init();
       	onload=function(){
@@ -25,7 +25,14 @@
 </head>
 
 <body>
-	
+	<header class="mui-bar mui-bar-nav">
+	 <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+     <h1 class="mui-title">
+        <font size="5">
+    		<b><i>TennisWorld</i></b>  
+    	</font></h1>
+    <!-- <a class="mui-icon-search mui-icon mui-icon-right-nav mui-pull-right"></a>-->
+	</header>
 	<div style=" width:100%;margin-left: 5%; margin-right: 5%;margin-top: 60px;">  
 	</div>  
 	<div class="background">
@@ -142,22 +149,6 @@
 		</table>
 		</div>		
 	</div>
-	
-	<nav class="mui-bar mui-bar-tab">
-	        <a class="mui-tab-item mui-active">
-	            <span class="mui-icon iconfont icon-home"></span>
-	            <span class="mui-tab-label">首页</span>
-	        </a>
-	        <a class="mui-tab-item">
-	            <span class="mui-icon iconfont icon-game"></span>
-	            <span class="mui-tab-label">赛事</span>
-	        </a>
-	        <a class="mui-tab-item">
-	            <span class="mui-icon iconfont icon-player"></span>
-	            <span class="mui-tab-label">球员</span>
-	        </a>
-	    </nav>
-	
 </body>
 </html>
 
