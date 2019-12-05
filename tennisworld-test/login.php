@@ -15,7 +15,7 @@ if ($result -> num_rows != 0) {
 	echo '<html>
 			<head>
 				<Script Language="JavaScript">
-					location.href="main.html";
+					location.href="head.html";
 				</Script>
 			</head>
 		</html>';

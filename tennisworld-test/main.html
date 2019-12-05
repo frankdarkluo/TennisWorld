@@ -11,49 +11,35 @@
     <script type="text/javascript">
 		mui.init()
 		mui.plusReady(function(){
-			var arr =document.getElementsByClassName("mui-tab-item");
-			var objYe = ["main.html","game.html","rank.php"];
-			var objStyle = {
-				 top:"0px",
-      	  bottom:"51px",
+			var pages = ["main.html","game.html","rank.php"];
+			var arr=document.getElementsByClassName("mui-tab-item");
+			var styles = {
+				top:"45px",
+      	        bottom:"51px",
 			};
 			var objs=[];
 			var self = plus.webview.currentWebview();//取到当前的主页窗口
 			for (var i=0;i<arr.length;i++){
-			!function(i){
-			var obj = plus.webview.create(objYe[i],objYe[i],objStyle);
-			 objs.push(obj);
-			
-			 arr[i].addEventListener("tap",function(){
-			 	for(var j=0;j<arr.length;j++){
-					if(j!=i){objs[j].hide()}
-					else{objs[j].show()}
-			 	}
-			 	self.append(objs[i])
-			 })
-			 }(i)
+				var sub=plus.webview.create(pages[i],pages[i],styles);
+				objs.push(sub);
+				!function(i){
+					arr[i].addEventListener("tap",function(){
+						for(var j=0;j<objs.length;j++){
+							if(j!=i) objs[j].hide();
+							else objs[j].show();
+						}
+						self.append(objs[i]);
+					})
+				}(i);
 			}
-			 mui.trigger(arr[0],"tap"); 
-			})
+			//默认触发第0个选项卡得tap事件。
+			mui.trigger(arr[0],"tap");
+	    })
 			
 	</script>
     <style type="text/css">
-    	
-    	#class{
-    		width:100%;
-    	
-    	}
-    	#class a{
-    		display:inline-block;
-    		height:30px;
-    		line-height:30px;
-    	
-    		color: #000000;
-    		width:24%;
-    		text-align:center;
-    		top:0px;
-    		left:0px;		
-    		margin-top:0px;
+    	.mui-table{
+    		background-color: cornflowerblue;
     	}
     	
     	.class .title{
@@ -82,7 +68,7 @@
     	</font></h1>
     </header>
 	<div class="mui-content">
-		<table border="0" cellspacing="0" cellpadding="0" style="width: 100%; line-height: 40px;">
+		<table border="0" cellspacing="0" cellpadding="0" style="width: 100%; line-height: 40px;;">
 			<tr>
 				<td align="center">
 					<a href="#">推荐</a>
@@ -224,7 +210,7 @@
             </li>           
         </ul>       
     </div>
-    <nav class='mui-bar mui-bar-tab'>
+         <nav class='mui-bar mui-bar-tab'>
         <a class='mui-tab-item mui-active' href='main.html' id='main'>
             <span class='mui-icon iconfont icon-home'></span>
             <span class='mui-tab-label'>首页</span>
@@ -238,6 +224,5 @@
             <span class='mui-tab-label'>球员</span>
         </a>
     </nav>
-
 </body>
 </html>

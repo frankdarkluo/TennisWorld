@@ -1,9 +1,29 @@
 {
-  "main.html": {
-    "refer": [
-      "rank.php",
-      "game.html"
-    ],
-    "resources": []
-  }
+	"main.html": {
+		"refer": [
+			"rank.php",
+			"game.html"
+		],
+		"resources": []
+	},
+	"head.html": {
+		"resources": [
+			"main.html"
+		],
+		"refer": [
+			"main.html",
+			"rank.php",
+			"game.html"
+		]
+	},
+	"index.html": {
+		"resources": [
+			"main.html"
+		],
+		"refer": [
+			"main.html",
+			"rank.php",
+			"game.html"
+		]
+	}
 }

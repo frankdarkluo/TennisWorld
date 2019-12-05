@@ -41,8 +41,6 @@ document.writeln("        <font size=\'5\'>");
 document.writeln("    		<b><i>TennisWorld</i></b>  ");
 document.writeln("    	</font></h1>");
 document.writeln("    </header>	");
-document.writeln("    ");
-document.writeln("     <nav class=\'mui-bar mui-bar-tab\'>");
 document.writeln("</body>");
 document.writeln("");
 document.writeln("</html>");
