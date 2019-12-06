@@ -26,7 +26,7 @@
 
 <body>
 	<header class="mui-bar mui-bar-nav">
-	 <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+	 <!--<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>-->
      <h1 class="mui-title">
         <font size="5">
     		<b><i>TennisWorld</i></b>  
@@ -141,7 +141,7 @@
 					$country_name=$sql_arr['国籍'];
 					$score=$sql_arr['积分'];
 					echo "<tr><td class='rank' style='text-align:center;'>$no</td>";
-					echo "<td class='player' style='color:mediumblue;'>$name</td>";
+					echo "<td class='player' style='color:mediumblue;'><a href='play.php?id=$name'>$name</a></td>";
 					echo "<td class='country'>$country_name</td>";
 					echo "<td class='score'>$score</td>";
 					echo "<td></td></tr>";
