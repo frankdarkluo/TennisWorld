@@ -36,16 +36,18 @@
 	<div style=" width:100%;margin-left: 5%; margin-right: 5%;margin-top: 60px;">  
 	</div>  
 	<div class="background">
-			<div class="tbottom">
-				<ul>
-					<li style="float:left;list-style:none;margin-left:15%;">
+		<div class="tbottom">
+			<table style="width: 100%; background-color: #EFEFF4;">
+				<tr>
+					<td align="center">
 						<a href="">世界排名</a>
-					</li>
-					<li  style="float:left;list-style:none;margin-left:25%">
+					</td>
+					<td align="center">
 						<a href="">名人堂</a>
-					</li>
-				</ul>
-			</div>
+					</td>
+				</tr>
+			</table>
+		</div>
 		
 
 		<div class="form">
@@ -101,9 +103,9 @@
 
 		<div class="content">
 			<table>
-			<tr>
+			<tr style="line-height: 40px;">
 				<th class="rank" style="text-align: center;">排名</th>
-				<th class="player" style="text-align: left;">球员名</th>
+				<th class="player" style="text-align: center;">球员名</th>
 				<th class="country" style="text-align: center;">国籍</th>
 				<th class="score" style="text-align: center;">积分</th>
 				<th class="" style="text-align: center;">变化</th>

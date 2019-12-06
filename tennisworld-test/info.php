@@ -23,7 +23,35 @@
 		window.onload = function(){
 			$("#addname").val(kw);
 		}
-
+		
+		function like(){		
+			var like = document.getElementById("like")
+			var icon = document.getElementById("iconlike")
+			if (String(like.innerText) == "点赞") {
+			    like.innerText = "已点赞";
+			    like.style.color = "#007AFF";
+			    icon.style.color = "#007AFF";
+			}
+			else{
+				like.innerText = "点赞";
+				like.style.color = "#929292";
+				icon.style.color = "#929292";
+			}	
+		}
+		function collection(){		
+			var collect = document.getElementById("collection")
+			var icon = document.getElementById("iconcollect")
+			if (String(collect.innerText) == "收藏") {
+			    collect.innerText = "已收藏";
+			    collect.style.color = "#007AFF";
+			    icon.style.color = "#007AFF";
+			}
+			else{
+				collect.innerText = "收藏";
+				collect.style.color = "#929292";
+				icon.style.color = "#929292";
+			}	
+		}
     </script>
     <style type="text/css">
     	.mui-content{
@@ -60,7 +88,7 @@
     </style>
     
 </head>
-<body style="overflow: hidden;">
+<body>
 	<header class="mui-bar mui-bar-nav">
 		 <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
 	     <h1 class="mui-title">
@@ -125,19 +153,16 @@
     	</tbody>	
     </div>
     
-    <nav class="mui-bar mui-bar-tab">
-        <a class="mui-tab-item mui-active">
-            <span class="mui-icon iconfont icon-home"></span>
-            <span class="mui-tab-label">首页</span>
-        </a>
-        <a class="mui-tab-item">
-            <span class="mui-icon iconfont icon-game"></span>
-            <span class="mui-tab-label">赛事</span>
-        </a>
-        <a class="mui-tab-item">
-            <span class="mui-icon iconfont icon-player"></span>
-            <span class="mui-tab-label">球员</span>
-        </a>
+    <nav class='mui-bar mui-bar-tab'>
+        <label class='mui-tab-item mui-active' style="padding-top: 5px;">
+            <span class='mui-icon iconfont icon-dianzan' id="iconlike" style="color: #929292;"></span>
+            <span class='mui-tab-label' onclick="like()" style="color: #929292; "id="like">点赞</span>
+        </label>
+        <label class='mui-tab-item' style="padding-top: 5px;">
+            <span class='mui-icon iconfont icon-shoucangcopy' id="iconcollect" style="color: #929292;"></span>
+            <span class='mui-tab-label' onclick="collection()" style="color: #929292;" id="collection">收藏</span>
+        </label>
     </nav>
+    
 </body>
 </html>
