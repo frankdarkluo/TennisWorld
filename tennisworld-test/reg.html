@@ -79,8 +79,7 @@
 				font-size: 45px;
 				font-family: "times new roman";
 				font-style: italic;
-				margin-bottom: 40px;
-				background-color: transparent;
+				margin-bottom: 12%;
 			}
 			
 			.account_pass {
@@ -89,22 +88,21 @@
 				margin-left: ;
 			}
 			
-			#button {
-				text-align: center;
-			}
-			
 			.mui-btn {
-				width: 300px;
+				color: white;
+				background-color: #4F9BFA;
+				width: 220px;
 				height: 40px;
 			}
 			
 			.mui-content {
-				margin-top: 30px;
+				margin-top: 10%;
 			}
 			
 			.mui-input-group {
 				background-color: transparent;
-				margin-top: 10px;
+				width: 100%;
+				margin: 0 auto;
 				/*border-bottom: hidden;*/
 			}
 			
@@ -114,51 +112,42 @@
 				padding-right: 30px;
 			}
 			
-			.mui-icon {
-				margin-top: 30px;
-				font-size: 60px;
-				padding-left: 50px;
-				padding-right: 60px;
-			}
-			
-			.mui-input-clear {}
 		</style>
 	</head>
 
 	<body>
-		<div style="solid #000000; width: 391px; height: 0px;margin: 0 auto;">
+		<div style="width: 100%; height: 100%;margin: 0 auto;">
 			<div class="mui-content">
-				<div>
-					<p align="center"><img src="img/head_picture.PNG"></img>
+				<div style="margin-bottom: 12%;">
+					<p align="center"><img src="img/head_picture.PNG" width="160px">
 					</p>
-					<p id="header">TennisWorld</p>
+					<p id="header" style="padding-top: 10px;">TennisWorld</p>
 				</div>
-				<div style=" width:100%;margin-left: 5%; margin-right: 5%;margin-top: 40px;">
-				</div>
-				<form class="mui-input-group" name="reg" action="reg.php" method="post" target="_self" onSubmit="return docheck()">
+
+				<form class="mui-input-group" name="reg" action="reg.php" method="post" target="_self" onsubmit="return docheck()">
 					<div class="mui-input-row">
-						<label class="account_pass">账号</label>
+						<label style="font-size: 18px;" class="account_pass">账号</label>
 						<input type="text" name="username" class="mui-input-clear" placeholder="手机号、用户名、邮箱">
 					</div>
 
 					<div class="mui-input-row">
-						<label class="account_pass">密码</label>
+						<label style="font-size: 18px;" class="account_pass">密码</label>
 						<input type="password" name="password" class="mui-input-clear" placeholder="请输入密码">
 					</div>
 
 					<div class="mui-input-row">
-						<label class="account_pass">确认密码</label>
+						<label style="font-size: 18px;" class="account_pass">确认密码</label>
 						<input type="password" name="rpwd" class="mui-input-clear" placeholder="请输入确认密码">
 					</div>
 
-					<div style=" width:100%;margin-left: 5%; margin-right: 1%;margin-top: 80px;"> </div>
-					<div class="mui-content-padded" id="button">
-						<button class="mui-btn  mui-btn-primary" type="submit" style="background-color:#0086B3;border:0;">注册</button>
+					<div style=" width:100%; margin-top: 15%;"></div>
+					<div class="mui-content-padded" id="button1" style="text-align: center;">
+						<button class="mui-btn  mui-btn-primary" type="submit" style="border:0;">注册</button>
 					</div>
 				</form>
 				
-				<div class="mui-content-padded" id="button">
-					<button class="mui-btn  mui-btn-primary" onclick="window.location.href='login.html'" style="background-color:#0086B3;border:0;margin-top:25px;">登录</button>
+				<div class="mui-content-padded" id="button2" style="text-align: center; margin-bottom: 20%;">
+					<button class="mui-btn  mui-btn-primary" onclick="window.location.href='login.html'" style="border:0; margin-top:25px;">登录</button>
 				</div>
 			</div>
 		</div>
