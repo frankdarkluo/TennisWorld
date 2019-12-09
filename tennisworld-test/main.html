@@ -12,7 +12,7 @@
     <script type="text/javascript">
 		mui.init()
 		mui.plusReady(function(){
-			var pages = ["main.html","game.html","rank.php"];
+			var pages = ["main.html","rank.php","game.html"];
 			var arr=document.getElementsByClassName("mui-tab-item");
 			var styles = {
 				top:"45px",
@@ -43,17 +43,6 @@
     		background-color: cornflowerblue;
     	}
     	
-    	.class .title{
-    		/*margin:0 auto;*/
-    		text-align:center;
-    	}
-    	.title{
-    		width:98%;
-    		height:20px;
-    		line-height:30px;
-    		display:inline-block;
-    		background-color:#4CD964;
-    	}
     	.mui-slider-group{
     		position:fixed;
     	}
@@ -62,31 +51,32 @@
     
 </head>
 <body>
-    <header class='mui-bar mui-bar-nav'>
-    <h1 class='mui-title' style='position:fixed'>
-        <font size='5'>
-    		<b><i>TennisWorld</i></b>  
-    	</font></h1>
-    </header>
-	<div class="mui-content">
-		<table border="0" cellspacing="0" cellpadding="0" style="width: 100%; line-height: 40px;;">
+    <header class="mui-bar mui-bar-nav" style="height: 85px; background-image:url(img/shadow.png);">
+		<h1 class="mui-title" style="position:fixed">
+			<font size="5">
+				<b><i>TennisWorld</i></b>  
+			</font>
+		</h1>
+		<table border="0" cellspacing="0" cellpadding="0" style="margin-top: 55px; width: 100%;">
 			<tr>
 				<td align="center">
-					<a href="#">推荐</a>
+					<label onclick="window.location.href='#'" style="color: #30333F;">推荐</label>
 				</td>
 				<td align="center">
-					<a href="#">赛历</a>
+					<label onclick="window.location.href='#'" style="color: #30333F;">赛历</label>
 				</td>
 				<td align="center"> 
-					<a href="#">视频</a>
+					<label onclick="window.location.href='video.html'" style="color: #30333F;">视频</label>
 				</td>
 				<td align="center">	
-					<a href="#">论坛</a>
+					<label onclick="window.location.href='#'" style="color: #30333F;">论坛</label>
 				</td>
 			</tr>
 		</table>
-		
-        <div id="slider" class="mui-slider" >
+    </header>
+	
+	<div class="mui-content">
+        <div id="slider" class="mui-slider" style="margin-top: 40px;">
           <div class="mui-slider-group mui-slider-loop">
             <!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
             <div class="mui-slider-item mui-slider-item-duplicate">

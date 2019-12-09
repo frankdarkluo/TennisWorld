@@ -25,6 +25,7 @@ if ($result -> num_rows != 0) {
 			<head>
 				<Script Language="JavaScript">
 					location.href="login.html";
+					alert("用户不存在!");
 				</Script>
 			</head>
 		</html>';

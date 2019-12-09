@@ -23,6 +23,7 @@ if ($result) {
 			<head>
 				<Script Language="JavaScript">
 					location.href="reg.html";
+					alert("注册失败!");
 				</Script>
 			</head>
 		</html>';

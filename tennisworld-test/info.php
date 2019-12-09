@@ -90,7 +90,7 @@
 </head>
 <body>
 	<header class="mui-bar mui-bar-nav">
-		 <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		 <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left" style="color: #30333F;"></a>
 	     <h1 class="mui-title">
 	        <font size="5">
 	    		<b><i>TennisWorld</i></b>  

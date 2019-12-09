@@ -25,32 +25,32 @@
 </head>
 
 <body>
-	<header class="mui-bar mui-bar-nav">
-	 <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
-     <h1 class="mui-title">
-        <font size="5">
-    		<b><i>TennisWorld</i></b>  
-    	</font></h1>
-    <!-- <a class="mui-icon-search mui-icon mui-icon-right-nav mui-pull-right"></a>-->
+	<header class="mui-bar mui-bar-nav" style="height: 85px;">
+	 <h1 class="mui-title">
+	    <font size="5">
+			<b><i>TennisWorld</i></b>  
+		</font>
+	</h1>
+	<table border="0" cellspacing="0" cellpadding="0" style="margin-top: 50px; width: 100%; background-color: transparent;">
+		<tr>
+			<td align="center">
+				<label onclick="window.location.href='#'" style="color: #30333F;">世界排名</label>
+			</td>
+			<td align="center">
+				<label onclick="window.location.href='#'" style="color: #30333F;">名人堂</label>
+			</td>
+			<td align="center">
+				<label onclick="window.location.href='#'" style="color: #30333F;">国内选手</label>
+			</td>
+			<td align="center">
+				<label onclick="window.location.href='#'" style="color: #30333F;">热门选手</label>
+			</td>
+		</tr>
+	</table>
 	</header>
-	<div style=" width:100%;margin-left: 5%; margin-right: 5%;margin-top: 60px;">  
-	</div>  
+  
 	<div class="background">
-		<div class="tbottom">
-			<table style="width: 100%; background-color: #EFEFF4;">
-				<tr>
-					<td align="center">
-						<a href="">世界排名</a>
-					</td>
-					<td align="center">
-						<a href="">名人堂</a>
-					</td>
-				</tr>
-			</table>	
-		</div>
-		
-
-		<div class="form">
+		<div class="form" style="margin-top: 100px;">
 			<form  action="tennis.php" method="post" id="myform">
 				<div class="f1">
 				<?php
