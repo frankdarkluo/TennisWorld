@@ -26,7 +26,7 @@ document.writeln("        <label class=\'mui-tab-item\' style=\'padding-top: 5px
 document.writeln("            <span class=\'mui-icon iconfont icon-player\' style=\'color: #30333F;\'></span>");
 document.writeln("            <span class=\'mui-tab-label\' style=\'color: #30333F;\'>球员</span>");
 document.writeln("        </label>");
-document.writeln("        <label class=\'mui-tab-item\' style=\'padding-top: 5px;\' onclick=\"window.location.href=\'game.html\'\" id=\'player\'>");
+document.writeln("        <label class=\'mui-tab-item\' style=\'padding-top: 5px;\' onclick=\"window.location.href=\'person.html\'\" id=\'player\'>");
 document.writeln("            <span class=\'mui-icon iconfont icon-game\' style=\'color: #30333F;\'></span>");
 document.writeln("            <span class=\'mui-tab-label\' style=\'color: #30333F;\'>个人</span>");
 document.writeln("        </label>");

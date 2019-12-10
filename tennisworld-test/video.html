@@ -6,11 +6,53 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="css/video.css">
 	<script type="text/javascript" src="js/video.js"></script>	
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <script src="js/mui.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/tennis.css"/>
+    <link rel="stylesheet" type="text/css" href="css/iconfont.css"/>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    <script type="text/javascript" src="head.js"></script>
+    <script type="text/javascript" charset="utf-8">
+      	mui.init();
+      	onload=function(){
+    		var sels = document.getElementsByTagName("select");
+    		for(var i = 0; i < sels.length; i++){
+       			sels[i].onchange = function(){
+            		this.form.submit();
+        		}
+    		}
+		}
+    </script>
+    <style type="text/css">
+    </style>
 </head>
 <body>
-	<div class="top">
-		视频
-	</div>
+	<header class="mui-bar mui-bar-nav" style="height: 85px; background-image:url(img/shadow.png);">
+		<h1 class="mui-title" style="position:fixed">
+			<font size="5">
+				<b><i>TennisWorld</i></b>  
+			</font>
+		</h1>
+		<table border="0" cellspacing="0" cellpadding="0" style="margin-top: 55px; width: 100%;">
+			<tr>
+				<td align="center">
+					<label onclick="window.location.href='main.html'" style="color: #30333F;">推荐</label>
+				</td>
+				<td align="center">
+					<label onclick="window.location.href='game.html'" style="color: #30333F;">赛历</label>
+				</td>
+				<td align="center"> 
+					<label onclick="window.location.href='video.html'" style="color: #30333F;">视频</label>
+				</td>
+				<td align="center">	
+					<label onclick="window.location.href='luntan.html'" style="color: #30333F;">论坛</label>
+				</td>
+			</tr>
+		</table>
+    </header>
+    <div style='margin-top: 85px;'>
+    </div>
 	<div class="video" id="video">
 		<video id="myvideo1" autoplay="autoplay" controls="controls" width="100%" poster="img/1.png">
 			<source src="video/1.mp4" type="video/mp4">
@@ -72,6 +114,9 @@
 	
 	<div class="footer" onclick="jiazai()">
 		<button type="button" id="jiazai">点击查看更多>>></button>
+	</div>
+	<div style="margin-bottom: 60px;">
+		
 	</div>
 </body>
 </html>
