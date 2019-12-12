@@ -21,36 +21,34 @@
 		}
     </script>
     <style type="text/css">
+		.head_table {
+			margin-top: 85px; 
+			width: 100%; 
+			height: 50px;
+			background-color: transparent;
+		}
     </style>
 </head>
 
 <body>
-	<header class="mui-bar mui-bar-nav" style="height: 85px;">
-	 <h1 class="mui-title">
-	    <font size="5">
-			<b><i>TennisWorld</i></b>  
-		</font>
-	</h1>
-	<table border="0" cellspacing="0" cellpadding="0" style="margin-top: 50px; width: 100%; background-color: transparent;">
-		<tr>
-			<td align="center">
-				<label onclick="window.location.href='#'" style="color: #30333F;">世界排名</label>
-			</td>
-			<td align="center">
-				<label onclick="window.location.href='#'" style="color: #30333F;">名人堂</label>
-			</td>
-			<td align="center">
-				<label onclick="window.location.href='#'" style="color: #30333F;">国内选手</label>
-			</td>
-			<td align="center">
-				<label onclick="window.location.href='#'" style="color: #30333F;">热门选手</label>
-			</td>
-		</tr>
-	</table>
-	</header>
-  
 	<div class="background">
-		<div class="form" style="margin-top: 100px;">
+		<table class="head_table" border="0" cellspacing="0" cellpadding="0">
+			<tr>
+				<td align="center">
+					<label onclick="window.location.href='#'" style="color: #30333F;">世界排名</label>
+				</td>
+				<td align="center">
+					<label onclick="window.location.href='#'" style="color: #30333F;">名人堂</label>
+				</td>
+				<td align="center">
+					<label onclick="window.location.href='#'" style="color: #30333F;">国内选手</label>
+				</td>
+				<td align="center">
+					<label onclick="window.location.href='#'" style="color: #30333F;">热门选手</label>
+				</td>
+			</tr>
+		</table>
+		<div class="form">
 			<form  action="tennis.php" method="post" id="myform">
 				<div class="f1">
 				<?php

@@ -89,14 +89,14 @@
     
 </head>
 <body>
-	<header class="mui-bar mui-bar-nav">
-		 <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left" style="color: #30333F;"></a>
-	     <h1 class="mui-title">
-	        <font size="5">
-	    		<b><i>TennisWorld</i></b>  
-	    	</font></h1>
-	</header>
-
+	<header class="mui-bar mui-bar-nav" style="background-color: #FFFFFF;">
+		<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left" style="color: #30333F;"></a>
+		<h1 class="mui-title mui-action-back" style="position:fixed">
+			<font size="5">
+				<b><i>TennisWorld</i></b>  
+			</font>
+		</h1>
+    </header>
     <div class="mui-content">
     	<?php
     		$link = mysqli_connect('cdb-7c1trg88.bj.tencentcdb.com:10203', 'root', 'tennisworld123') or die('连接失败 : ' . mysqli_error());

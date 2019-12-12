@@ -2,43 +2,41 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-<title></title>
-<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
-<link href="css/mui.min.css" rel="stylesheet" />
-<link rel="stylesheet" type="text/css" href="css/iconfont.css"/>
-<script src="js/mui.min.js"></script>
-<script type="text/javascript" src="head.js"></script>
-<script type="text/javascript">
-	mui.init()
-</script>
+	<title></title>
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<link href="css/mui.min.css" rel="stylesheet" />
+	<link rel="stylesheet" type="text/css" href="css/iconfont.css"/>
+	<script src="js/mui.min.js"></script>
+	<script type="text/javascript">
+		mui.init()
+	</script>
 
+	<style type="text/css">
+		.a{
+			text-align:center;
+			max-height: 150px;
+		}
+		#left {
+		display:inline-block;
+		float:left;
+		margin-left: 25%;
+		}
+		.b{
+			margin-top: 60px;
+			text-align: center;
+		}
+		.a img{height: 150px;}
+		</style>
 </head>
 
 <body <!--background="img/back-1.jpg" style="background-size: cover;-->">
-	<style type="text/css">
-	.a{
-		text-align:center;
-		max-height: 150px;
-	}
-	#left {
-    display:inline-block;
-    float:left;
-    margin-left: 25%;
-    }
-    .b{
-    	margin-top: 60px;
-    	text-align: center;
-    }
-    .a img{height: 150px;}
-	</style>
-	<header class="mui-bar mui-bar-nav">
-	<!-- <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>-->
-	<a class="c" href="javascript:window.history.go(-1)"><img src="img/return.png" style="height: 30px;margin-top: 7px;"></a>
-     <h1 class="mui-title">
-        <font size="5">
-    		<b><i>TennisWorld</i></b>  
-    	</font></h1>
-     <!--<a class="mui-icon-search mui-icon mui-icon-right-nav mui-pull-right"></a>-->
+	<header class="mui-bar mui-bar-nav" style="background-color: #FFFFFF;">
+		<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left" style="color: #30333F;"></a>
+		<h1 class="mui-title mui-action-back" style="position:fixed">
+			<font size="5">
+				<b><i>TennisWorld</i></b>  
+			</font>
+		</h1>
 	</header>
     <!--<div class="main">
 		<div class="mui-content">

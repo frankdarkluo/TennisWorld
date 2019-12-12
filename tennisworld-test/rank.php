@@ -21,37 +21,35 @@
 		}
     </script>
     <style type="text/css">
+		.head_table {
+			margin-top: 85px; 
+			width: 100%; 
+			height: 50px;
+			background-color: transparent;
+		}
     </style>
 </head>
 
 <body>
-	<header class="mui-bar mui-bar-nav" style="height: 85px;">
-     <h1 class="mui-title">
-        <font size="5">
-    		<b><i>TennisWorld</i></b>  
-    	</font>
-	</h1>
-	<table border="0" cellspacing="0" cellpadding="0" style="margin-top: 50px; width: 100%; background-color: transparent;">
-		<tr>
-			<td align="center">
-				<label onclick="window.location.href='#'" style="color: #30333F;">世界排名</label>
-			</td>
-			<td align="center">
-				<label onclick="window.location.href='#'" style="color: #30333F;">名人堂</label>
-			</td>
-			<td align="center">
-				<label onclick="window.location.href='#'" style="color: #30333F;">国内选手</label>
-			</td>
-			<td align="center">
-				<label onclick="window.location.href='#'" style="color: #30333F;">热门选手</label>
-			</td>
-		</tr>
-	</table>
-	</header>
-
 	<div class="background">
-		<div class="form" style="margin-top: 100px;">
-			<form  action="tennis.php" method="post" id="myform">
+		<table class="head_table" border="0" cellspacing="0" cellpadding="0">
+			<tr>
+				<td align="center">
+					<label onclick="window.location.href='#'" style="color: #30333F;">世界排名</label>
+				</td>
+				<td align="center">
+					<label onclick="window.location.href='#'" style="color: #30333F;">名人堂</label>
+				</td>
+				<td align="center">
+					<label onclick="window.location.href='#'" style="color: #30333F;">国内选手</label>
+				</td>
+				<td align="center">
+					<label onclick="window.location.href='#'" style="color: #30333F;">热门选手</label>
+				</td>
+			</tr>
+		</table>
+		<div class="form">
+			<form  action="rank.php" method="post" id="myform">
 				<div class="f1">
 				<?php
 					error_reporting(E_ALL || ~E_NOTICE);
@@ -144,7 +142,7 @@
 					echo "<td class='player' style='color:mediumblue;'><a href='play.php?id=$name'>$name</a></td>";
 					echo "<td class='country'>$country_name</td>";
 					echo "<td class='score'>$score</td>";
-					echo "<td style='text-align:center'>N/A</td></tr>";
+					echo "<td></td></tr>";
 				}
 				echo "<tr style='height: 60px;'><td></td><td></td><td></td><td></td><td></td></tr>";
 			?>
