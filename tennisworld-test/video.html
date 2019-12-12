@@ -26,6 +26,23 @@
     </script>
     <style type="text/css">
     </style>
+    
+    <script type="text/javascript">
+        var videos = document.getElementsByTagName('video');
+            for (var i = videos.length - 1; i >= 0; i--) {
+                (function(){
+                    var p = i;
+                    videos[p].addEventListener('play',function(){
+                        pauseAll(p);
+                    })
+                })()
+            }
+            function pauseAll(index){
+                for (var j = videos.length - 1; j >= 0; j--) {
+                    if (j!=index) videos[j].pause();
+                }
+            };
+    </script>
 </head>
 <body>
 	<header class="mui-bar mui-bar-nav" style="height: 85px; background-image:url(img/shadow.png);">
@@ -51,74 +68,58 @@
 			</tr>
 		</table>
     </header>
-    <div style='margin-top: 85px;'>
+    <div style="height: 95px;">
     </div>
+    
 	<div class="video" id="video">
-		<video id="myvideo1" autoplay="autoplay" controls="controls" width="100%" poster="img/1.png">
+		<video id="myvideo1"  preload="metadata" controls="controls" width="100%" poster="">
 			<source src="video/1.mp4" type="video/mp4">
 		</video>
-		<div class="bottom">
-			<button>
-				<div class="zhuanfa"></div>
-			</button>
+		<div class="bottom1">
+			<div class="zhuanfa"></div>
 			<span>122</span>
-			<button>
-				<div class="pinglun"></div>
-			</button>
+			<div class="pinglun"></div>
 			<span>234</span>
-			<button onclick="zan(1)">
-				<span class="zan" id="zan1">赞</span>
-			</button>
-			<span id="dianzannum1">2020</span>	
+			<img src="http://175.24.36.208/tennisworld-test/img/zan.png" id="zan1" onclick="dianzan(1)" style="width: 28px;height: 28px;margin-left: 5%;margin-right: 3%;">
+			<span id="zannum1">2020</span>	
 		</div>
-		<div class="xian"></div>
 		
-		<video id="myvideo1" autoplay="autoplay" controls="controls" width="100%" poster="img/1.png">
+		<video id="myvideo2"  preload="metadata" controls="controls" width="100%" poster="">
 			<source src="video/2.mp4" type="video/mp4">
 		</video>
-		<div class="bottom">
-			<button>
-				<div class="zhuanfa"></div>
-			</button>
+		<div class="bottom1">
+			<div class="zhuanfa"></div>
 			<span>122</span>
-			<button>
-				<div class="pinglun"></div>
-			</button>
+			<div class="pinglun"></div>
 			<span>234</span>
-			<button onclick="zan(2)">
-				<span class="zan" id="zan2">赞</span>
-			</button>
-			<span id="dianzannum2">456</span>	
+			<img src="http://175.24.36.208/tennisworld-test/img/zan.png" id="zan2" onclick="dianzan(2)" style="width: 28px;height: 28px;margin-left: 5%;margin-right: 3%;">
+			<span id="zannum2">123</span>	
 		</div>
-		<div class="xian"></div>
 		
-		<video id="myvideo1" autoplay="autoplay" controls="controls" width="100%" poster="img/1.png">
+		<video id="myvideo3" preload="metadata" controls="controls" width="100%" poster="">
 			<source src="video/3.mp4" type="video/mp4">
 		</video>
-		<div class="bottom">
-			<button>
-				<div class="zhuanfa"></div>
-			</button>
+		<div class="bottom1">
+			<div class="zhuanfa"></div>
 			<span>122</span>
-			<button>
-				<div class="pinglun"></div>
-			</button>
+			<div class="pinglun"></div>
 			<span>234</span>
-			<button onclick="zan(3)">
-				<span class="zan" id="zan3">赞</span>
-			</button>
-			<span id="dianzannum3">234</span>	
+			<img src="http://175.24.36.208/tennisworld-test/img/zan.png" id="zan3" onclick="dianzan(3)" style="width: 28px;height: 28px;margin-left: 5%;margin-right: 3%;">
+			<span id="zannum3">200</span>	
 		</div>
-		<div class="xian"></div>
+		
 	</div>
 	
+	
 	<div class="footer" onclick="jiazai()">
-		<button type="button" id="jiazai">点击查看更多>>></button>
+		<div id="jiazai">点击查看更多>>></div>
 	</div>
-	<div style="margin-bottom: 60px;">
-		
+	
+	<div style="height: 60px;">	
 	</div>
 </body>
 </html>
+
+
 	
 	

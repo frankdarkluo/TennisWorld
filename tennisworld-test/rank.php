@@ -144,7 +144,7 @@
 					echo "<td class='player' style='color:mediumblue;'><a href='play.php?id=$name'>$name</a></td>";
 					echo "<td class='country'>$country_name</td>";
 					echo "<td class='score'>$score</td>";
-					echo "<td></td></tr>";
+					echo "<td style='text-align:center'>N/A</td></tr>";
 				}
 				echo "<tr style='height: 60px;'><td></td><td></td><td></td><td></td><td></td></tr>";
 			?>

@@ -1,30 +1,40 @@
-function zan(i){
-	var con = document.getElementById("dianzannum"+i.toString());
-	var zan = document.getElementById("zan"+i.toString());
+var ji = 4;
 
-	if (String(zan.innerText) == "赞") {
-		con.innerText = Number(con.innerText)+1;
-	    zan.innerText = "已赞";
-	    zan.className = "zan1";
+function dianzan(i){
+	var num = document.getElementById("zannum"+i)
+	var zan = document.getElementById("zan"+i);
+	if(zan.src == ("http://175.24.36.208/tennisworld-test/img/zan.png"))
+	{
+		zan.setAttribute('src','http://175.24.36.208/tennisworld-test/img/zan1.png');
+		num.innerText = Number(num.innerText) + 1;
 	}
 	else{
-		con.innerText = Number(con.innerText)-1;
-	    zan.innerText = "赞";
-	    zan.className = "zan";
-	}	
-}
-
-function jiazai(){
-	for(var i = 4;i < 8;i++)
-	{	
-		var url = "video/"+(i+1)+".mp4";
-		var videoid = "mydiveo"+(i+1);
-		var x = document.getElementById("video");
-		var y = x.innerHTML;	
-		x.innerHTML = y +'<video id='+videoid+' autoplay="autoplay" controls="controls" width="100%" poster="img/1.png"><source src='+url+' type="video/mp4"></video><div class="bottom"><button><div class="zhuanfa"></div></button><span>122</span><button><div class="pinglun"></div></button><span>234</span><button onclick="zan('+(i+1)+')"><span class="zan" id="zan'+(i+1)+'">赞</span></button><span id="dianzannum'+(i+1)+'">202</span></div><div class="xian"></div>'	
+		zan.setAttribute('src','http://175.24.36.208/tennisworld-test/img/zan.png');
+		num.innerText = Number(num.innerText) - 1;
 	}
 }
+
+
+function jiazai(){
+	var par = document.getElementById("video");
+	for(var i = ji;i < ji + 4;i++)
+	{
+		var dianzannum = parseInt(Math.random()*100+50);
+		var url = "video/"+i+".mp4";
+		var videoid = "mydiveo"+i;
+		var zanid = "zan"+i;
+		var zannumid = "zannum"+i;
+		
+		var div0 = document.createElement("div");
+		div0.innerHTML = '<video id='+videoid+' preload="metadata" controls="controls" width="100%" poster=""><source src='+url+' type="video/mp4"></video>';
+		par.appendChild(div0);
+		
+		var div1 = document.createElement("div");
+		div1.className = "bottom1";
+		div1.innerHTML = '<div class="zhuanfa"></div><span>122</span><div class="pinglun"></div><span>234</span><img src="http://175.24.36.208/tennisworld-test/img/zan.png" id='+zanid+' onclick="dianzan('+i+')" style="width: 28px;height: 28px;margin-left: 5%;margin-right: 3%;"><span id='+zannumid+'>'+dianzannum+'</span></div>';
+		par.appendChild(div1);
+	}
+	ji = ji + 4;
+}
+
 							
-
-
-	

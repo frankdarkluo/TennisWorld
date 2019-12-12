@@ -14,33 +14,42 @@
 
 </head>
 
-<body>
-	
-	<header class="mui-bar mui-bar-nav">
-	 <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
-     <h1 class="mui-title">
-        <font size="5">
-    		<b><i>TennisWorld</i></b>  
-    	</font></h1>
-     <!--<a class="mui-icon-search mui-icon mui-icon-right-nav mui-pull-right"></a>-->
-	</header>
-    <div class="main">
-		<div class="mui-content">
-		<h3>球员信息 <style type="text/css">
-	    	h3{color: #000000;margin-top: 60px;margin-left: 10px;text-align:center;}
-	    </style>
-		</h3>
-	</div>
+<body <!--background="img/back-1.jpg" style="background-size: cover;-->">
 	<style type="text/css">
 	.a{
 		text-align:center;
+		max-height: 150px;
 	}
 	#left {
     display:inline-block;
     float:left;
     margin-left: 25%;
     }
+    .b{
+    	margin-top: 60px;
+    	text-align: center;
+    }
+    .a img{height: 150px;}
 	</style>
+	<header class="mui-bar mui-bar-nav">
+	<!-- <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>-->
+	<a class="c" href="javascript:window.history.go(-1)"><img src="img/return.png" style="height: 30px;margin-top: 7px;"></a>
+     <h1 class="mui-title">
+        <font size="5">
+    		<b><i>TennisWorld</i></b>  
+    	</font></h1>
+     <!--<a class="mui-icon-search mui-icon mui-icon-right-nav mui-pull-right"></a>-->
+	</header>
+    <!--<div class="main">
+		<div class="mui-content">
+		<h3>球员信息 <style type="text/css">
+	    	h3{color: #000000;margin-top: 60px;margin-left: 10px;text-align:center;}
+	    </style>
+		</h3>
+	</div>-->
+	<div class="b">
+		<p style="font-family: SimHei;color: #000000;font-size:120%;">球员信息</p>
+	</div>
 	<?php
 	error_reporting(E_ALL || ~E_NOTICE);
 	$con = mysqli_connect('cdb-7c1trg88.bj.tencentcdb.com:10203', 'root', 'tennisworld123');
@@ -89,6 +98,9 @@
         	
     }
 	?>
+	<div style="height: 60px; ">
+		
+	</div>
 
 </body>
 

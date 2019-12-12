@@ -13,73 +13,41 @@ span{
 	text-align: center;
 }
 		
-.bottom{
-	display: inline-block;
+.bottom1{
+	margin-top: 10px;
 	width: 100%;
 	height: 40px;
-	text-align:right;
-	margin: auto;
 	background-color: #e4e4e4;
+	border-bottom: 1px solid #ddd;
+	border-top: 1px solid #ddd;
+	align-items: center;
+	display: flex;
 }
 
 .video{
 	width: 100%;
 	background-color: #fff;
+	border: 1px solid #ddd;
 }
 		
-button{
-	text-decoration: none;
-	background-color: #e4e4e4;
-	border: none;
-	outline: none;
-}
-		
-.zan{
-	display: inline-block;
-	height: 28px;
-	width: 84px;
-	background-image: url(../img/zan.png);
-	background-size: 33% 100%;
-	background-color: #E4E4E4;
-	background-repeat:no-repeat;
-	text-align: right;
-	color: grey;
-}
-
-.zan1{
-	display: inline-block;
-	height: 28px;
-	width: 84px;
-	background-image: url(../img/zan1.png);
-	background-size: 33% 100%;
-	background-color: #E4E4E4;
-	background-repeat:no-repeat;
-	text-align: right;
-	color: grey;
-}
-
 .pinglun{
 	display: inline-block;
-	height: 28px;
-	width: 28px;
-	background-image: url(../img/pinglun.png);
+	height: 30px;
+	width: 30px;
+	background-image: url(http://175.24.36.208/tennisworld-test/img/pinglun.png);
 	background-size: 100% 100%;
+	margin-left: 5%;
+	margin-right: 2%;
 }
 		
 .zhuanfa{
-	margin-top: 5px;
 	display: inline-block;
-	height: 28px;
-	width: 28px;
-	background-image: url(../img/zhuanfa.png);
+	height: 35px;
+	width: 35px;
+	background-image: url(http://175.24.36.208/tennisworld-test/img/zhuanfa.png);
 	background-size: 100% 100%;
-}
-
-
-.xian{
-	height: 1px;
-	width: 100%;
-	background-color: #000;
+	margin-left: 5%;
+	margin-right: 2%;
 }
 
 .footer{

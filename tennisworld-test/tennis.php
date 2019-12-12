@@ -134,17 +134,16 @@
 					$sql = mysqli_query($con, "select * from $tableName where 国籍='$country' and 官方排名 between $rank_min and $rank_max order by 官方排名");	
 				}
 				$datarow = mysqli_num_rows($sql);
-//				print($datarow);
 				while($sql_arr = mysqli_fetch_assoc($sql)){
 					$no=$sql_arr['官方排名'];
 					$name=$sql_arr['姓名'];
 					$country_name=$sql_arr['国籍'];
 					$score=$sql_arr['积分'];
 					echo "<tr><td class='rank' style='text-align:center;'>$no</td>";
-					echo "<td class='player' style='color:mediumblue;'>$name</td>";
+					echo "<td class='player' style='color:mediumblue;'><a href='play2.php?id=$name'>$name</a></td>";
 					echo "<td class='country'>$country_name</td>";
 					echo "<td class='score'>$score</td>";
-					echo "<td></td></tr>";
+					echo "<td style='text-align:center'>N/A</td></tr>";
 				}
 				echo "<tr style='height: 60px;'><td></td><td></td><td></td><td></td><td></td></tr>";
 			?>
@@ -154,4 +153,3 @@
 	
 </body>
 </html>
-
