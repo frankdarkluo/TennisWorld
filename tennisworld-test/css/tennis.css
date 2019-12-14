@@ -70,19 +70,19 @@
 }
 
 .xuanze{
-	padding-top: 2px;
+	padding-top: 5px;
 	padding-bottom: 5px;
 	height: 30px;
+	width: 80px;
 	text-align: left;
 	font-size: 100%;
 	/*font-size: 24px;*/
-	background: url(../img/arrow.jpg) no-repeat right;
+	background: url(../img/arrow.jpg) no-repeat;
 	background-size: 12px;
+	background-position: 55px 12px;
 	background-color: white;
 	border: 0;
-	border-radius: 10%;
 	/*padding-right: 50%;*/
-	padding-left: 1px;
 }
 
 
@@ -98,13 +98,13 @@
 }
 
 .f2{
-	width: 35%;
-	margin-left: 5%;
+	width: 20%;
+	margin-left: 13%;
 }
 
 .f3{
 	width: 20%;
-	margin-left: 5%;
+	margin-left: 10%;
 }
 
 .content{

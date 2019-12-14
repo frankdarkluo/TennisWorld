@@ -1,3 +1,15 @@
+var File_Page = {"main.html":"首页", "rank.php":"球员", "player.html":"个人"};
+var inactive_color = "#D1D1D1";
+var active_color = "#30333F";
+
+var curFile = window.location.pathname;	// 获取网页文件名
+curFile = curFile.substring(curFile.lastIndexOf("/")+1);  // 去除开始的‘\’
+var curPage = File_Page[curFile];
+
+var shouye_color = (curPage=="首页"?active_color:inactive_color);
+var qiuyuan_color = (curPage=="球员"?active_color:inactive_color);
+var geren_color = (curPage=="个人"?active_color:inactive_color);
+
 document.writeln("<!doctype html>");
 document.writeln("<html>");
 document.writeln("");
@@ -42,16 +54,19 @@ document.writeln("		</table>");
 document.writeln("    </header>");
 document.writeln("	<nav class=\'mui-bar mui-bar-tab\'>");
 document.writeln("        <label class=\'mui-tab-item mui-active\' style=\'padding-top: 5px;\' onclick=\"window.location.href=\'main.html\'\" id=\'main\'>");
-document.writeln("            <span class=\'mui-icon iconfont icon-home\' style=\'color: #30333F;\'></span>");
-document.writeln("            <span class=\'mui-tab-label\' style=\'padding-left: 18px; color: #30333F;\'>首页</span>");
+//document.writeln("            <span class=\'mui-icon iconfont icon-home\' style=\'color: #30333F;\'></span>");
+document.writeln("            <span class=\'mui-icon iconfont icon-home\' style=\'color: "+shouye_color+";\'></span>");
+document.writeln("            <span class=\'mui-tab-label\' style=\'padding-left: 18px; color: "+shouye_color+";\'>首页</span>");
 document.writeln("        </label>");
 document.writeln("        <label class=\'mui-tab-item\' style=\'padding-top: 5px;\' onclick=\"window.location.href=\'rank.php\'\" id=\'game\'>");
-document.writeln("            <span class=\'mui-icon iconfont icon-player\' style=\'color: #30333F;\'></span>");
-document.writeln("            <span class=\'mui-tab-label\' style=\'color: #30333F;\'>球员</span>");
+//document.writeln("            <span class=\'mui-icon iconfont icon-player\' style=\'color: #30333F;\'></span>");
+document.writeln("            <span class=\'mui-icon iconfont icon-player\' style=\'color: "+qiuyuan_color+";\'></span>");
+document.writeln("            <span class=\'mui-tab-label\' style=\'color: "+qiuyuan_color+";\'>球员</span>");
 document.writeln("        </label>");
 document.writeln("        <label class=\'mui-tab-item\' style=\'padding-top: 5px;\' onclick=\"window.location.href=\'player.html\'\" id=\'player\'>");
-document.writeln("            <span class=\'mui-icon iconfont icon-game\' style=\'color: #30333F;\'></span>");
-document.writeln("            <span class=\'mui-tab-label\' style=\'color: #30333F;\'>个人</span>");
+//document.writeln("            <span class=\'mui-icon iconfont icon-game\' style=\'color: #30333F;\'></span>");
+document.writeln("            <span class=\'mui-icon iconfont icon-game\' style=\'color: "+geren_color+";\'></span>");
+document.writeln("            <span class=\'mui-tab-label\' style=\'color: "+geren_color+";\'>个人</span>");
 document.writeln("        </label>");
 document.writeln("    </nav>");
 document.writeln("    ");
