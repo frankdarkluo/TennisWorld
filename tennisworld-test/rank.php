@@ -8,7 +8,7 @@
     <link rel="stylesheet" type="text/css" href="css/tennis.css"/>
     <link rel="stylesheet" type="text/css" href="css/iconfont.css"/>
     <link href="css/mui.min.css" rel="stylesheet"/>
-    <script type="text/javascript" src="head.js"></script>
+    <script type="text/javascript" src="head5.js"></script>
     <script type="text/javascript" charset="utf-8">
       	mui.init();
       	onload=function(){

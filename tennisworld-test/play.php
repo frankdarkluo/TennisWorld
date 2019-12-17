@@ -59,7 +59,7 @@
 	mysqli_select_db($con, "tennisworld");
 	$id = $_GET['id'];
 	$sql = mysqli_query($con, "select * from ATP where 姓名 = '$id' ");
-	$sqld  = mysqli_query($con, "select * from ATP_athlete where 姓名 = '$id' ");
+	$sqld  = mysqli_query($con, "select * from ATP_athlete  where 姓名 = '$id' ");
 	while($sql_arr = mysqli_fetch_assoc($sql)){
 		$img=$sql_arr['相片'];
 		$name=$sql_arr['姓名'];
@@ -93,6 +93,45 @@
         echo "<span id='left'>赛季奖金($)：$saijijiangjin</span><br>";
         echo "<span id='left'>生涯单打冠军数：$shengyadanda</span><br>";
         echo "<span id='left'>赛季单打冠军数：$saijidanda</span><br>";
+        	
+    }
+	?>
+	<?php
+	$sql2 = mysqli_query($con, "select * from WTA where 姓名 = '$id' ");
+	$sqld2  = mysqli_query($con, "select * from WTA_athlete  where 姓名 = '$id' ");
+	while($sql_arr2 = mysqli_fetch_assoc($sql2)){
+		$img2=$sql_arr2['相片'];
+		$name2=$sql_arr2['姓名'];
+		$english2=$sql_arr2['英文名'];
+		$country_name2=$sql_arr2['国籍'];
+		echo "<div class='a'><img src = $img2></div>";
+        echo "<span id='left'>姓名：$name2</span><br>
+        	  <span id='left'>英文名：$english2</span><br>
+              <span id='left'>国籍：$country_name2</span><br>";
+        }
+    while($sqld_arr2 = mysqli_fetch_assoc($sqld2)){
+    	$chusheng2=$sqld_arr2['出生地'];
+    	$juzhu2=$sqld_arr2['居住地'];
+    	$shengao2=$sqld_arr2['身高厘米'];
+    	$chushengriqi2=$sqld_arr2['生日'];
+    	$chipai2=$sqld_arr2['持拍'];
+        $shenyazuigao2=$sqld_arr2['单打最佳排名'];
+        $shenyazuigaoshijian2=$sqld_arr2['首次单打最佳排名时间'];
+        $shengyajiangjin2=$sqld_arr2['生涯奖金'];
+        $saijijiangjin2=$sqld_arr2['赛季奖金'];
+        $shengyadanda2=$sqld_arr2['生涯单打冠军数'];
+        $saijidanda2=$sqld_arr2['赛季单打冠军数'];
+        echo "<span id='left'>出生地：$chusheng2</span><br>";
+        echo "<span id='left'>居住地：$juzhu2</span><br>";
+        echo "<span id='left'>身高：$shengao2 cm</span><br>";
+        echo "<span id='left'>生日：$chushengriqi2</span><br>";
+        echo "<span id='left'>持拍（1为左手，2为右手）：$chipai2</span><br>";
+        echo "<span id='left'>单打最佳排名：$shenyazuigao2</span><br>";
+        echo "<span id='left'>首次单打最佳排名时间：$shenyazuigaoshijian2</span><br>";	
+        echo "<span id='left'>生涯奖金($)：$shengyajiangjin2</span><br>";
+        echo "<span id='left'>赛季奖金($)：$saijijiangjin2</span><br>";
+        echo "<span id='left'>生涯单打冠军数：$shengyadanda2</span><br>";
+        echo "<span id='left'>赛季单打冠军数：$saijidanda2</span><br>";
         	
     }
 	?>
