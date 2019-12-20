@@ -155,11 +155,11 @@
     
     <nav class='mui-bar mui-bar-tab'>
         <label class='mui-tab-item mui-active' style="padding-top: 5px;">
-            <span class='mui-icon iconfont icon-dianzan' id="iconlike" style="color: #929292;"></span>
+            <span class='mui-icon iconfont icon-dianzan' id="iconlike" onclick="like()" style="color: #929292;"></span>
             <span class='mui-tab-label' onclick="like()" style="color: #929292; "id="like">点赞</span>
         </label>
         <label class='mui-tab-item' style="padding-top: 5px;">
-            <span class='mui-icon iconfont icon-shoucangcopy' id="iconcollect" style="color: #929292;"></span>
+            <span class='mui-icon iconfont icon-shoucangcopy' id="iconcollect" onclick="collection()" style="color: #929292;"></span>
             <span class='mui-tab-label' onclick="collection()" style="color: #929292;" id="collection">收藏</span>
         </label>
     </nav>
