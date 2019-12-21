@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>vedio</title>
+	<title>video</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="css/video.css">
 	<script type="text/javascript" src="js/video.js"></script>	
@@ -12,7 +12,7 @@
     <link rel="stylesheet" type="text/css" href="css/tennis.css"/>
     <link rel="stylesheet" type="text/css" href="css/iconfont.css"/>
     <link href="css/mui.min.css" rel="stylesheet"/>
-    <script type="text/javascript" src="head3.js"></script>
+    <script type="text/javascript" src="head.js"></script>
     <script type="text/javascript" charset="utf-8">
       	mui.init();
       	onload=function(){
@@ -25,8 +25,7 @@
 		}
     </script>
     <style type="text/css">
-    </style>
-    
+    </style> 
     <script type="text/javascript">
         var videos = document.getElementsByTagName('video');
             for (var i = videos.length - 1; i >= 0; i--) {
@@ -43,9 +42,11 @@
                 }
             };
     </script>
+
 </head>
 <body>
-	<header class="mui-bar mui-bar-nav" style="height: 85px; background-image:url(img/shadow.png);">
+		
+	<!--<header class="mui-bar mui-bar-nav" style="height: 85px; background-image:url(img/shadow.png);">
 		<h1 class="mui-title" style="position:fixed">
 			<font size="5">
 				<b><i>TennisWorld</i></b>  
@@ -67,13 +68,19 @@
 				</td>
 			</tr>
 		</table>
-    </header>
+    </header>-->
     <div style="height: 95px;">
     </div>
     
+	<div id="wrapper">
+	<div id="scroller">
+	<div id="pullDown">
+		<span class="pullDownLabel">下拉刷新</span>
+	</div>
+		
 	<div class="video" id="video">
-		<video id="myvideo1"  preload="metadata" controls="controls" width="100%" poster="">
-			<source src="video/1.mp4" type="video/mp4">
+		<video id="myvideo1"  preload="metadata" controls="controls" width="100%" poster="http://175.24.36.208/tennisworld-test/video/img/1.jpg">
+			<source src="http://175.24.36.208/tennisworld-test/video/1.mp4" type="video/mp4">
 		</video>
 		<div class="bottom1">
 			<div class="zhuanfa"></div>
@@ -83,9 +90,8 @@
 			<img src="http://175.24.36.208/tennisworld-test/img/zan.png" id="zan1" onclick="dianzan(1)" style="width: 28px;height: 28px;margin-left: 5%;margin-right: 3%;">
 			<span id="zannum1">2020</span>	
 		</div>
-		
-		<video id="myvideo2"  preload="metadata" controls="controls" width="100%" poster="">
-			<source src="video/2.mp4" type="video/mp4">
+		<video id="myvideo2"  preload="metadata" controls="controls" width="100%" poster="http://175.24.36.208/tennisworld-test/video/img/2.jpg">
+			<source src="http://175.24.36.208/tennisworld-test/video/2.mp4" type="video/mp4">
 		</video>
 		<div class="bottom1">
 			<div class="zhuanfa"></div>
@@ -93,11 +99,10 @@
 			<div class="pinglun"></div>
 			<span>234</span>
 			<img src="http://175.24.36.208/tennisworld-test/img/zan.png" id="zan2" onclick="dianzan(2)" style="width: 28px;height: 28px;margin-left: 5%;margin-right: 3%;">
-			<span id="zannum2">123</span>	
+			<span id="zannum2">2020</span>	
 		</div>
-		
-		<video id="myvideo3" preload="metadata" controls="controls" width="100%" poster="">
-			<source src="video/3.mp4" type="video/mp4">
+		<video id="myvideo3"  preload="metadata" controls="controls" width="100%" poster="http://175.24.36.208/tennisworld-test/video/img/3.jpg">
+			<source src="http://175.24.36.208/tennisworld-test/video/3.mp4" type="video/mp4">
 		</video>
 		<div class="bottom1">
 			<div class="zhuanfa"></div>
@@ -105,21 +110,32 @@
 			<div class="pinglun"></div>
 			<span>234</span>
 			<img src="http://175.24.36.208/tennisworld-test/img/zan.png" id="zan3" onclick="dianzan(3)" style="width: 28px;height: 28px;margin-left: 5%;margin-right: 3%;">
-			<span id="zannum3">200</span>	
+			<span id="zannum3">2020</span>	
 		</div>
-		
-	</div>
+		<video id="myvideo4"  preload="metadata" controls="controls" width="100%" poster="http://175.24.36.208/tennisworld-test/video/img/4.jpg">
+			<source src="http://175.24.36.208/tennisworld-test/video/4.mp4" type="video/mp4">
+		</video>
+		<div class="bottom1">
+			<div class="zhuanfa"></div>
+			<span>122</span>
+			<div class="pinglun"></div>
+			<span>234</span>
+			<img src="http://175.24.36.208/tennisworld-test/img/zan.png" id="zan4" onclick="dianzan(4)" style="width: 28px;height: 28px;margin-left: 5%;margin-right: 3%;">
+			<span id="zannum4">2020</span>	
+		</div>
+
+</div>
 	
-	
-	<div class="footer" onclick="jiazai()">
-		<div id="jiazai">点击查看更多>>></div>
+		<div id="pullUp">
+			<span class="pullUpLabel">上拉加载更多</span>
+		</div>
 	</div>
+    </div>
+   
+	<script type="text/javascript" src="js/scroll.js"></script>
+	<script type="text/javascript" src="js/video.js"></script>
 	
 	<div style="height: 60px;">	
 	</div>
 </body>
 </html>
-
-
-	
-	

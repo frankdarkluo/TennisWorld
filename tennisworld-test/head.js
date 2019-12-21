@@ -1,14 +1,28 @@
-var File_Page = {"main.html":"首页", "rank.php":"球员", "player.html":"个人"};
-var inactive_color = "#D1D1D1";
-var active_color = "#30333F";
+var File_Page1 = {"main.html":"首页", "rank.php":"球员", "player.html":"个人", "game.html":"赛历", "video.html":"视频", "luntan.html":"论坛"};
+var inactive_color1 = "#D1D1D1";
+var active_color1 = "#30333F";
 
-var curFile = window.location.pathname;	// 获取网页文件名
-curFile = curFile.substring(curFile.lastIndexOf("/")+1);  // 去除开始的‘\’
-var curPage = File_Page[curFile];
+var curFile1 = window.location.pathname;	// 获取网页文件名
+curFile1 = curFile1.substring(curFile1.lastIndexOf("/")+1);  // 去除开始的‘\’
+var curPage1 = File_Page1[curFile1];
 
-var shouye_color = (curPage=="首页"?active_color:inactive_color);
-var qiuyuan_color = (curPage=="球员"?active_color:inactive_color);
-var geren_color = (curPage=="个人"?active_color:inactive_color);
+var shouye_color = (curPage1=="首页"||curPage1=="赛历"||curPage1=="视频"||curPage1=="论坛"?active_color1:inactive_color1);
+var qiuyuan_color = (curPage1=="球员"?active_color1:inactive_color1);
+var geren_color = (curPage1=="个人"?active_color1:inactive_color1);
+
+
+var File_Page2 = {"main.html":"推荐", "game.html":"赛历", "video.html":"视频", "luntan.html":"论坛"};
+var inactive_color2 = "#FFFFFF";
+var active_color2 = "#E35E69";
+
+var curFile2 = window.location.pathname;	// 获取网页文件名
+curFile2 = curFile2.substring(curFile2.lastIndexOf("/")+1);  // 去除开始的‘\’
+var curPage2 = File_Page2[curFile2];
+
+var tuijian_color = (curPage2=="推荐"?active_color2:inactive_color2);
+var saili_color = (curPage2=="赛历"?active_color2:inactive_color2);
+var shipin_color = (curPage2=="视频"?active_color2:inactive_color2);
+var luntan_color = (curPage2=="论坛"?active_color2:inactive_color2);
 
 document.writeln("<!doctype html>");
 document.writeln("<html>");
@@ -39,16 +53,16 @@ document.writeln("		</h1>");
 document.writeln("		<table border=\'0\' cellspacing=\'0\' cellpadding=\'0\' style=\'margin-top: 55px; width: 100%;\'>");
 document.writeln("			<tr>");
 document.writeln("				<td align=\'center\'>");
-document.writeln("					<label onclick=\"window.location.href=\'main.html\'\" style=\'color: #30333F;\'>推荐</label>");
+document.writeln("					<label onclick=\"window.location.href=\'main.html\'\" style=\'color: #30333F;\'><span  id=\'redline1\' style=\'border-bottom:2px solid; border-color:"+tuijian_color+"; padding-bottom:6px;\'>推荐</span></label>");
 document.writeln("				</td>");
 document.writeln("				<td align=\'center\'>");
-document.writeln("					<label onclick=\"window.location.href=\'game.html\';\" style=\'color: #30333F;\'>赛历</label>");
+document.writeln("					<label onclick=\"window.location.href=\'game.html\';\" style=\'color: #30333F;\'><span  id=\'redline2\' style=\'border-bottom:2px solid; border-color:"+saili_color+"; padding-bottom:6px;\'>赛历</span></label>");
 document.writeln("				</td>");
 document.writeln("				<td align=\'center\'> ");
-document.writeln("					<label onclick=\"window.location.href=\'video.html\';\" style=\'color: #30333F;\'>视频</label>");
+document.writeln("					<label onclick=\"window.location.href=\'video.html\';\" style=\'color: #30333F;\'><span  id=\'redline3\' style=\'border-bottom:2px solid; border-color:"+shipin_color+"; padding-bottom:6px;\'>视频</span></label>");
 document.writeln("				</td>");
 document.writeln("				<td align=\'center\'>	");
-document.writeln("					<label onclick=\"window.location.href=\'luntan.html\';\" style=\'color: #30333F;\'>论坛</label>");
+document.writeln("					<label onclick=\"window.location.href=\'luntan.html\';\" style=\'color: #30333F;\'><span  id=\'redline4\' style=\'border-bottom:2px solid; border-color:"+luntan_color+"; padding-bottom:6px;\'>论坛</span></label>");
 document.writeln("				</td>");
 document.writeln("			</tr>");
 document.writeln("		</table>");

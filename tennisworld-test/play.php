@@ -29,7 +29,7 @@
 		</style>
 </head>
 
-<body <!--background="img/back-1.jpg" style="background-size: cover;-->">
+<body background="img/back-2.jpg" style="background-size: cover;">
 	<header class="mui-bar mui-bar-nav" style="background-color: #FFFFFF;">
 		<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left" style="color: #30333F;"></a>
 		<h1 class="mui-title mui-action-back" style="position:fixed">

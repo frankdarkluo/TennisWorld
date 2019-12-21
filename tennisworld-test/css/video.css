@@ -3,9 +3,9 @@
 	padding: 0;
 }
 
-span{
+/*span{
 	font-size: 25px;
-}
+}*/
 
 .top{
 	width: 100%;
@@ -55,3 +55,4 @@ span{
 	height: 30px;
 	text-align: center;
 }
+#pullDown, #pullUp {padding:0 10px;height:30px;line-height:30px;color:#888;text-align:center}

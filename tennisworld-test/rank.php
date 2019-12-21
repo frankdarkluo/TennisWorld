@@ -8,7 +8,7 @@
     <link rel="stylesheet" type="text/css" href="css/tennis.css"/>
     <link rel="stylesheet" type="text/css" href="css/iconfont.css"/>
     <link href="css/mui.min.css" rel="stylesheet"/>
-    <script type="text/javascript" src="head5.js"></script>
+    <script type="text/javascript" src="head.js"></script>
     <script type="text/javascript" charset="utf-8">
       	mui.init();
       	onload=function(){
@@ -142,7 +142,7 @@
 					echo "<td class='player' style='color:mediumblue;'><a href='play.php?id=$name'>$name</a></td>";
 					echo "<td class='country'>$country_name</td>";
 					echo "<td class='score'>$score</td>";
-					echo "<td></td></tr>";
+					echo "<td style='text-align:center;'>N/A</td></tr>";
 				}
 				echo "<tr style='height: 60px;'><td></td><td></td><td></td><td></td><td></td></tr>";
 			?>
